@@ -84,6 +84,7 @@ CREATE TABLE SongGenres (
   songId INT NOT NULL,
   genreId INT NOT NULL,
   CONSTRAINT songGenreId_unique UNIQUE (songGenreId),
+  CONSTRAINT song_genre_unique UNIQUE (songId, genreId),
   FOREIGN KEY (songId) REFERENCES Songs (songId) ON DELETE CASCADE,
   FOREIGN KEY (genreId) REFERENCES Genres (genreId) ON DELETE CASCADE
 );

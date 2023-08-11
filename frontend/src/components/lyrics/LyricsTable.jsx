@@ -1,5 +1,5 @@
 import React from 'react';
-// import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
 function truncateText(text, maxLength) {
     if (text.length > maxLength) {
@@ -8,8 +8,7 @@ function truncateText(text, maxLength) {
     return text;
 }
 
-
-function LyricsTable({ data }) {
+function LyricsTable({ data, onEdit }) {
     return (
         <table>
             <thead>
@@ -17,7 +16,7 @@ function LyricsTable({ data }) {
                 <th>Lyric ID</th>
                 <th>Song ID</th>
                 <th>Lyrics</th>
-                {/*<th>Edit</th>*/}
+                <th>Edit</th>
             </tr>
             </thead>
             <tbody>
@@ -26,11 +25,11 @@ function LyricsTable({ data }) {
                     <td>{d.lyricId}</td>
                     <td>{d.songTitle}</td>
                     <td style={{ whiteSpace: 'pre-line' }}>{truncateText(d.lyricsText, 100)}</td>
-                    {/*<td>*/}
-                    {/*    <button className="edit-icon" onClick={() => onEdit(d)}>*/}
-                    {/*        <EditOutlinedIcon />*/}
-                    {/*    </button>*/}
-                    {/*</td>*/}
+                    <td>
+                        <button className="edit-icon" onClick={() => onEdit(d)}>
+                            <EditOutlinedIcon />
+                        </button>
+                    </td>
                 </tr>
             ))}
             </tbody>

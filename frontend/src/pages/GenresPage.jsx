@@ -37,7 +37,7 @@ function GenresPage() {
         getGenres();
     }, [])
 
-    //open the edit modal with the selected Item
+    //open the edit modal with the selected Genre
     const openEditModal = (genre) => {
         setSelectedGenre(genre);
         setIsEditModalOpen(true);
