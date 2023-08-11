@@ -1,21 +1,19 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 
-import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
-
+import vinylLogo from '../img/vinyl-logo.png';
 
 function Navigation() {
     return (
         <nav className="App-nav">
-            {/*<Link to="/">*/}
-            {/*    <img src={tradeExpressCircle} alt="Trade Express Logo" style={{ width: '100%' }} />*/}
-            {/*</Link>*/}
+            <Link to="/">
+                <img src={vinylLogo} alt="Taylor Swift Database Logo" style={{ width: '50%' }} />
+            </Link>
 
             <ul className="nav-list">
                 <li className="active-link">
                     <NavLink to="/" className="nav-link">
                         <div className="icon-container">
-                            <GridViewOutlinedIcon />
                             <h3>Home</h3>
                         </div>
                     </NavLink>

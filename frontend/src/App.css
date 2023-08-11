@@ -1,18 +1,22 @@
 :root {
-  --color-navigation: #161a1d;
+  --color-navigation: #191f2c;
   /* --color-background: #252a33; */
-  --color-background: #161a1d;
-  --color-outline: #252a33;
+  --color-background: #191f2c;
+  --color-card: #232c3b;
+  --color-outline: rgba(0, 0, 0, 0);
 
-  --color-card: #252a33;
+  --color-header: #fff;
+  --color-body: #fff;
+
+  --color-navigation-body: #fff;
 
   /** CSS DARK THEME PRIMARY COLORS */
-  --color-primary-100: #07698d;
-  --color-primary-200: #3e8aad;
-  --color-primary-300: #5b98b7;
-  --color-primary-400: #74a6c1;
-  --color-primary-500: #8cb4cb;
-  --color-primary-600: #a3c3d6;
+  --color-primary-100: #275449;
+  --color-primary-200: #326e5f;
+  --color-primary-300: #2e7060;
+  --color-primary-400: #629b8d;
+  --color-primary-500: #91afa7;
+  --color-primary-600: #c4dad5;
 
   /** CSS DARK THEME SURFACE COLORS */
   --color-surface-100: #1c1f21;
@@ -31,11 +35,11 @@
   --color-surface-mixed-600: #959ea4;
 
   --color-white: #fff;
-  --color-accent: #07698d;
-  --color-accent-hover: #065471;
+  --color-accent: #346c5d;
+  --color-accent-hover: #1e4b40;
 
-  --color-accent-select: #8d5e07;
-  --color-transparent: rgba(24, 24, 24, 0.658);
+  --color-accent-select: #284943;
+  --color-transparent: rgb(25, 31, 44);
   --color-transparent-button: #252a3343;
 
   --color-add-icon: #08a837;
@@ -50,7 +54,7 @@
   --card-padding: 1.8rem;
   --sidebar-border-radius: 0 2rem 2rem 0;
   --padding-1: 1.2rem;
-  --box-shadow: 0 2rem 2rem var(--color-transparent);
+  --box-shadow: 0 0.5rem 0.5rem var(--color-transparent);
   --box-shadow-button: 0 0.5rem 1rem var(--color-transparent-button);
 
 }
@@ -142,7 +146,7 @@ MAIN SCROLLBAR
 
 .App-header {
   margin: 3rem 4rem 2rem 4rem;
-  color: var(--color-white);
+  color: var(--color-header);
 }
 
 .App-content {
@@ -154,7 +158,7 @@ h1 {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 
@@ -185,7 +189,7 @@ body {
 
 .nav-list li a {
   text-decoration: none;
-  color: white;
+  color: var(--color-navigation-body);
   font-size: 1rem;
   text-align: left;
   display: flex;
@@ -288,8 +292,8 @@ p {
 
 body {
   background-color: var(--color-background);
-  font-family: 'Poppins', sans-serif;
-  color: var(--color-white);
+  font-family: 'Inter', sans-serif;
+  color: var(--color-body);
 }
 
 footer {
@@ -514,7 +518,7 @@ form {
   font-size: 1rem;
   color: var(--color-white);
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .form legend {
@@ -533,7 +537,7 @@ form {
 input,
 select {
   width: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   margin: 0.5rem 0 2rem 0;
   box-sizing: border-box;
