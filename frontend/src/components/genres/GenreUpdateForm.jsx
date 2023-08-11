@@ -22,7 +22,6 @@ function GenreUpdateForm({ selectedGenre, onUpdate }) {
                 "genreId": editGenreId,
                 "genreName": editGenreName
             });
-            console.log(response)
 
         } catch (error) {
             console.error(error);

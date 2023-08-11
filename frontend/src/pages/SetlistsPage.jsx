@@ -1,13 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import SetlistsTable from '../components/setlists/SetlistsTable';
+import SetlistAddForm from '../components/setlists/SetlistAddForm';
+import SetlistDeleteForm from '../components/setlists/SetlistDeleteForm';
+import SetlistUpdateForm from '../components/setlists/SetlistUpdateForm';
+import Modal from '../components/Modal';
 import Axios from 'axios';
 
+import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
 function SetlistsPage() {
-    // store data fetched from ba ckend
+    // store data fetched from backend
     const [data, setData] = useState([])
 
-    // send a GET request to view all Items
+    // set state variables for modal components
+    const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+    const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+    const [selectedSetlist, setSelectedSetlist] = useState(false);
+
+    // send a GET request to view all Setlists
     const getSetlists = async () => {
         try {
             // send GET request
@@ -25,8 +37,13 @@ function SetlistsPage() {
         getSetlists();
     }, [])
 
+    //open the edit modal with the selected Setlist
+    const openEditModal = (setlist) => {
+        setSelectedSetlist(setlist);
+        setIsEditModalOpen(true);
+    }
 
-    // return a div/card component that displays the Items table
+    // return a div/card component that displays the Setlists table
     return (
         <div>
 
@@ -38,13 +55,52 @@ function SetlistsPage() {
                     </div>
 
                     <div className="card-header-right">
+                        <button
+                            className="add-icon"
+                            onClick={() => setIsAddModalOpen(true)}>
+                            <AddOutlinedIcon/>ADD
+                        </button>
+                        <button
+                            className="delete-icon"
+                            onClick={() => setIsDeleteModalOpen(true)}>
+                            <DeleteOutlineOutlinedIcon/>DELETE
+                        </button>
                     </div>
 
                 </div>
 
-                <SetlistsTable data={data}/>
+                <SetlistsTable data={data} onEdit={openEditModal}/>
 
             </div>
+
+            <Modal
+                isOpen={isAddModalOpen}
+                onClose={() => setIsAddModalOpen(false)}>
+                <SetlistAddForm onAdd={() => {
+                    getSetlists();
+                    setIsAddModalOpen(false);
+                }}/>
+            </Modal>
+
+            <Modal
+                isOpen={isDeleteModalOpen}
+                onClose={() => setIsDeleteModalOpen(false)}>
+                <SetlistDeleteForm data={data} onDelete={() => {
+                    getSetlists();
+                    setIsDeleteModalOpen(false);
+                }}/>
+            </Modal>
+
+            <Modal
+                isOpen={isEditModalOpen}
+                onClose={() => setIsEditModalOpen(false)}>
+                <SetlistUpdateForm
+                    selectedSetlist={selectedSetlist}
+                    onUpdate={() => {
+                        getSetlists();
+                        setIsEditModalOpen(false);
+                    }}/>
+            </Modal>
 
         </div>
     );

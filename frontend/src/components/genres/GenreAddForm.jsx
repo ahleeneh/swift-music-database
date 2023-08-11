@@ -24,7 +24,7 @@ function GenreAddForm({ onAdd }) {
         }
     }
 
-    // return the add Gemre form
+    // return the add Genre form
     return (
         <div className="form">
             <legend>Add a Genre</legend>
