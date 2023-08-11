@@ -16,8 +16,8 @@ function SongGenresTable({ data }) {
             {data.map((d) => (
                 <tr key={d.songGenreId}>
                     <td>{d.songGenreId}</td>
-                    <td>{d.songId}</td>
-                    <td>{d.genreId}</td>
+                    <td>{d.songTitle}</td>
+                    <td>{d.genreName}</td>
                     {/*<td>*/}
                     {/*    <button className="edit-icon" onClick={() => onEdit(d)}>*/}
                     {/*        <EditOutlinedIcon />*/}

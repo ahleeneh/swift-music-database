@@ -1,6 +1,14 @@
 import React from 'react';
 // import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
+function truncateText(text, maxLength) {
+    if (text.length > maxLength) {
+        return text.substring(0, maxLength - 3) + '...';
+    }
+    return text;
+}
+
+
 function LyricsTable({ data }) {
     return (
         <table>
@@ -16,8 +24,8 @@ function LyricsTable({ data }) {
             {data.map((d) => (
                 <tr key={d.lyricId}>
                     <td>{d.lyricId}</td>
-                    <td>{d.songId}</td>
-                    <td>{d.lyricsText}</td>
+                    <td>{d.songTitle}</td>
+                    <td style={{ whiteSpace: 'pre-line' }}>{truncateText(d.lyricsText, 100)}</td>
                     {/*<td>*/}
                     {/*    <button className="edit-icon" onClick={() => onEdit(d)}>*/}
                     {/*        <EditOutlinedIcon />*/}

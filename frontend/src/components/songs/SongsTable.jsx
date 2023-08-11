@@ -11,6 +11,7 @@ function SongsTable({ data }) {
                 <th>Duration</th>
                 <th>Album</th>
                 <th>Featuring</th>
+                <th>Genres</th>
                 {/*<th>Edit</th>*/}
             </tr>
             </thead>
@@ -20,8 +21,9 @@ function SongsTable({ data }) {
                     <td>{d.songId}</td>
                     <td>{d.songTitle}</td>
                     <td>{d.songDuration}</td>
-                    <td>{d.albumId}</td>
+                    <td>{d.albumTitle}</td>
                     <td>{d.featuredArtist}</td>
+                    <td>{d.songGenres}</td>
                     {/*<td>*/}
                     {/*    <button className="edit-icon" onClick={() => onEdit(d)}>*/}
                     {/*        <EditOutlinedIcon />*/}

@@ -10,7 +10,7 @@ function ConcertsTable({ data }) {
                 <th>Name</th>
                 <th>Venue</th>
                 <th>Location</th>
-                <th>Date & Time</th>
+                <th>Date</th>
                 <th>Tour ID</th>
                 <th>Setlist ID</th>
 
@@ -25,8 +25,8 @@ function ConcertsTable({ data }) {
                     <td>{d.concertVenue}</td>
                     <td>{d.concertLocation}</td>
                     <td>{d.concertDateTime}</td>
-                    <td>{d.tourId}</td>
-                    <td>{d.setlistId}</td>
+                    <td>{d.tourName}</td>
+                    <td>{d.setlistName}</td>
                     {/*<td>*/}
                     {/*    <button className="edit-icon" onClick={() => onEdit(d)}>*/}
                     {/*        <EditOutlinedIcon />*/}

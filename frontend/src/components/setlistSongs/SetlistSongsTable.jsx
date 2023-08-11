@@ -16,8 +16,8 @@ function SetlistSongsTable({ data }) {
             {data.map((d) => (
                 <tr key={d.setlistSongId}>
                     <td>{d.setlistSongId}</td>
-                    <td>{d.setlistId}</td>
-                    <td>{d.songId}</td>
+                    <td>{d.setlistName}</td>
+                    <td>{d.songTitle}</td>
                     {/*<td>*/}
                     {/*    <button className="edit-icon" onClick={() => onEdit(d)}>*/}
                     {/*        <EditOutlinedIcon />*/}
