@@ -55,38 +55,38 @@ VALUES
 
 INSERT INTO Songs (songTitle, songDuration, albumId)
     VALUES
-        ('Lavender Haze', '00:03:22', 10),
-        ('Maroon', '00:03:38', 10),
-        ('Anti-Hero', '00:03:20', 10),
-        ('Snow on the Beach', '00:04:16', 10),
-        ('You''re on Your Own, Kid', '00:03:14', 10),
-        ('Midnight Rain', '00:02:54', 10),
-        ('Question...?', '00:03:30', 10),
-        ('Vigilante Shit', '00:02:44', 10),
-        ('Bejeweled', '00:03:14', 10),
-        ('Labyrinth', '00:04:07', 10),
-        ('Karma', '00:03:24', 10),
-        ('Sweet Nothing', '00:03:08', 10),
-        ('Mastermind', '00:03:11', 10),
-        ('Willow', '00:03:34', 9),
-        ('Champagne Problems', '00:04:04', 9),
-        ('Gold Rush', '00:03:05', 9),
-        ('''Tis the Damn Season', '00:03:49', 9),
-        ('Tolerate It', '00:04:05', 9),
+        ('Lavender Haze', '00:03:22', 20),
+        ('Maroon', '00:03:38', 20),
+        ('Anti-Hero', '00:03:20', 20),
+        ('Snow on the Beach', '00:04:16', 20),
+        ('You''re on Your Own, Kid', '00:03:14', 20),
+        ('Midnight Rain', '00:02:54', 20),
+        ('Question...?', '00:03:30', 20),
+        ('Vigilante Shit', '00:02:44', 20),
+        ('Bejeweled', '00:03:14', 20),
+        ('Labyrinth', '00:04:07', 20),
+        ('Karma', '00:03:24', 20),
+        ('Sweet Nothing', '00:03:08', 20),
+        ('Mastermind', '00:03:11', 20),
+        ('Willow', '00:03:34', 19),
+        ('Champagne Problems', '00:04:04', 19),
+        ('Gold Rush', '00:03:05', 19),
+        ('''Tis the Damn Season', '00:03:49', 19),
+        ('Tolerate It', '00:04:05', 19),
         ('No Body, No Crime', '00:03:35', 9),
-        ('Happiness', '00:05:15', 9),
-        ('Dorothea', '00:03:45', 9),
-        ('Coney Island', '00:04:35', 9),
-        ('Ivy', '00:04:20', 9),
-        ('Cowboy Like Me', '00:04:35', 9),
-        ('Long Story Short', '00:03:35', 9),
-        ('Marjorie', '00:04:17', 9),
-        ('Closure', '00:03:00', 9),
-        ('Evermore', '00:05:04', 9);
+        ('Happiness', '00:05:15', 19),
+        ('Dorothea', '00:03:45', 19),
+        ('Coney Island', '00:04:35', 19),
+        ('Ivy', '00:04:20', 19),
+        ('Cowboy Like Me', '00:04:35', 19),
+        ('Long Story Short', '00:03:35', 19),
+        ('Marjorie', '00:04:17', 19),
+        ('Closure', '00:03:00', 19),
+        ('Evermore', '00:05:04', 19);
 
 INSERT INTO Lyrics (songId, lyricsText)
     VALUES
-        (1, 'Meet me at midnight
+        (85, 'Meet me at midnight
             Starin'' at the ceilin'' with you
             Oh, you don''t ever say too much
             And you don''t really read into
@@ -212,21 +212,19 @@ INSERT INTO Lyrics (songId, lyricsText)
 
 INSERT INTO Concerts (concertName, concertVenue, concertLocation, concertDateTime, tourId, setlistId)
     VALUES
-        ('Glendale Night 1', 'State Farm Stadium', 'Glendale, AZ', '2023-03-17 18:30:00', 6, 1),
-        ('Glendale Night 2', 'State Farm Stadium', 'Glendale, AZ', '2023-03-18 18:30:00', 6, 2),
-        ('Las Vegas Night 1', 'Allegiant Stadium', 'Las Vegas, NV','2023-03-24 18:30:00', 6, NULL),
-        ('Las Vegas Night 1', 'Allegiant Stadium', 'Las Vegas, NV', '2023-03-25 18:30:00', 6, NULL),
-        ('Arlington Night 1', 'AT&T Stadium', 'Arlington, TX', '2023-03-31 18:30:00', 6, NULL),
-        ('Arlington Night 2', 'AT&T Stadium', 'Arlington, TX', '2023-04-01 18:30:00', 6, NULL),
-        ('Arlington Night 3', 'AT&T Stadium', 'Arlington, TX', '2023-04-02 18:30:00', 6, NULL);
+        ('Glendale Night 1', 'State Farm Stadium', 'Glendale, AZ', '2023-03-17 18:30:00', 12, 3),
+        ('Glendale Night 2', 'State Farm Stadium', 'Glendale, AZ', '2023-03-18 18:30:00', 12, 4),
+        ('Las Vegas Night 1', 'Allegiant Stadium', 'Las Vegas, NV','2023-03-24 18:30:00', 12, NULL),
+        ('Las Vegas Night 1', 'Allegiant Stadium', 'Las Vegas, NV', '2023-03-25 18:30:00', 12, NULL),
+        ('Arlington Night 1', 'AT&T Stadium', 'Arlington, TX', '2023-03-31 18:30:00', 12, NULL),
+        ('Arlington Night 2', 'AT&T Stadium', 'Arlington, TX', '2023-04-01 18:30:00', 12, NULL),
+        ('Arlington Night 3', 'AT&T Stadium', 'Arlington, TX', '2023-04-02 18:30:00', 12, NULL);
 
 INSERT INTO SongGenres (songId, genreId)
     VALUES
-        (1, 9),
-        (1, 10),
-        (2, 10);
+        (85, 34),
+        (85, 35);
 
 INSERT INTO SetlistSongs (setlistId, songId)
     VALUES
-        (1, 1),
-        (1, 3);
+        (3, 85);

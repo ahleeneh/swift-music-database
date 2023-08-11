@@ -4,6 +4,7 @@ const cors = require('cors');
 const router = express.Router();
 const PORT = 1989;
 const app = express();
+require('dotenv').config();
 
 // setup middleware
 app.use(cors());
