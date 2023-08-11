@@ -8,7 +8,7 @@ exports.getAllTours = (callback) => {
             tourId,
             tourName,
             DATE_FORMAT(tourStartDate, '%Y-%m-%d') AS tourStartDate,
-            DATE_FORMAT(tourEndDate, '%Y-%m-%d') AS tourEndDate,
+            IFNULL(DATE_FORMAT(tourEndDate, '%Y-%m-%d'), 'Ongoing') AS tourEndDate,
             tourDescription
         FROM Tours;`;
     db.pool.query(queryGetAllTours, callback);

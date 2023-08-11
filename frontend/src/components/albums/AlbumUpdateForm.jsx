@@ -3,7 +3,6 @@ import Axios from 'axios';
 
 function AlbumUpdateForm({ selectedAlbum, onUpdate }) {
     // set state variables to edit an Album
-    // const [albumId, setAlbumId] = useState('');
     const [editAlbumId, setEditAlbumId] = useState('');
     const [editAlbumTitle, setEditAlbumTitle] = useState('');
     const [editReleaseDate, setEditReleaseDate] = useState('');

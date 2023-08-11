@@ -378,7 +378,7 @@ width: 20rem;
   float: right;
   align-items: center;
   border-radius: var(--border-radius-1);
-  box-shadow: var(--box-shadow-button);
+  /*box-shadow: var(--box-shadow-button);*/
   /*font-family: 'Space Mono', monospace;*/
   background-color: var(--color-delete-icon);
   color: var(--color-white);
@@ -400,7 +400,6 @@ width: 20rem;
   float: right;
   align-items: center;
   border-radius: var(--border-radius-1);
-  box-shadow: var(--box-shadow-button);
 
 
   background-color: var(--color-add-icon);
