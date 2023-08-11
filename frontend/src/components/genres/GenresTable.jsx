@@ -1,14 +1,14 @@
 import React from 'react';
-// import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
-function GenresTable({ data }) {
+function GenresTable({ data, onEdit }) {
     return (
         <table>
             <thead>
             <tr>
                 <th>Genre ID</th>
                 <th>Name</th>
-                {/*<th>Edit</th>*/}
+                <th>Edit</th>
             </tr>
             </thead>
             <tbody>
@@ -16,11 +16,11 @@ function GenresTable({ data }) {
                 <tr key={d.genreId}>
                     <td>{d.genreId}</td>
                     <td>{d.genreName}</td>
-                    {/*<td>*/}
-                    {/*    <button className="edit-icon" onClick={() => onEdit(d)}>*/}
-                    {/*        <EditOutlinedIcon />*/}
-                    {/*    </button>*/}
-                    {/*</td>*/}
+                    <td>
+                        <button className="edit-icon" onClick={() => onEdit(d)}>
+                            <EditOutlinedIcon />
+                        </button>
+                    </td>
                 </tr>
             ))}
             </tbody>

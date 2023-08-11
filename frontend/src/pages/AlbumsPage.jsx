@@ -19,13 +19,13 @@ function AlbumsPage() {
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
     const [selectedAlbum, setSelectedAlbum] = useState(false);
 
-    // send a GET request to view all Items
+    // send a GET request to view all Albums
     const getAlbums = async () => {
         try {
             // send GET request
             const response = await Axios.get('http://localhost:1989/albums');
 
-            // store Items data
+            // store Albums data
             setData(response.data)
         } catch (error) {
             console.error(error);
@@ -43,7 +43,7 @@ function AlbumsPage() {
         setIsEditModalOpen(true);
     }
 
-    // return a div/card component that displays the Items table
+    // return a div/card component that displays the Albums table
     return (
         <div>
 

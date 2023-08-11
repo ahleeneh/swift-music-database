@@ -33,6 +33,7 @@ function AlbumDeleteForm({ data, onDelete }) {
                     <select
                         name="albumId"
                         id="albumId"
+                        value={deleteAlbumId}
                         onChange={(e) => setDeleteAlbumId(e.target.value)}>
 
                         <option disabled value="">

@@ -33,6 +33,7 @@ function TourDeleteForm({ data, onDelete }) {
                     <select
                         name="tourId"
                         id="tourId"
+                        value={deleteTourId}
                         onChange={(e) => setDeleteTourId(e.target.value)}>
 
                         <option disabled value="">
