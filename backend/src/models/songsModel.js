@@ -1,7 +1,7 @@
 // import the required database connector
 const db = require('../../db-connector');
 
-// get all Albums from the database
+// get all Songs from the database
 exports.getAllSongs = (callback) => {
     const queryGetAllSongs = `
         SELECT
@@ -19,4 +19,39 @@ exports.getAllSongs = (callback) => {
     db.pool.query(queryGetAllSongs, callback);
 }
 
+// get a Song by songId from the database
+exports.getSongById = (songId, callback) => {
+    const queryGetSongById = `
+        SELECT * FROM Songs
+        WHERE songId = ?`;
+    db.pool.query(queryGetSongById, [songId], callback);
+}
 
+// add a Song to the database
+exports.addSong= (songTitle, songDuration, albumId, featuredArtist, callback) => {
+    const queryAddSong = `
+        INSERT INTO Songs (songTitle, songDuration, albumId, featuredArtist)
+        VALUES (?, ?, ?, ?);`;
+    db.pool.query(queryAddSong, [songTitle, songDuration, albumId, featuredArtist], callback);
+}
+
+// update an existing Song to the database
+exports.updateSong = (songTitle, songDuration, albumId, featuredArtist, songId, callback) => {
+    const queryUpdateSong = `
+        UPDATE SONGS
+        SET
+            songTitle = ?,
+            songDuration = ?,
+            albumId = ?,
+            featuredArtist = ?
+        WHERE songId = ?;`;
+    db.pool.query(queryUpdateSong, [songTitle, songDuration, albumId, featuredArtist, songId], callback);
+}
+
+// delete an existing Song from the database
+exports.deleteSong = (songId, callback) => {
+    const queryDeleteSong = `
+        DELETE FROM Songs
+        WHERE songId = ?;`;
+    db.pool.query(queryDeleteSong, [songId], callback);
+}

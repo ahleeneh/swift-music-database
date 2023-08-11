@@ -1,53 +1,49 @@
 :root {
+  --color-midnights-blue: #5e6883;
+  --color-midnights-blue-bright: #1831a8;
+  --color-midnights-blue-bright-hover: #273ca1;
+  --color-midnights-blue-dark: #3f476c;
+
+  --color-midnights-green: #718281;
+  --color-midnights-green-bright: #0fa14e;
+  --color-midnights-green-bright-hover: #288a52;
+  --color-midnights-green-dark: #3c4a42;
+
+  --color-midnights-pink: #896d68;
+  --color-midnights-pink-bright: #ce3115;
+  --color-midnights-pink-bright-hover: #c04c38;
+  --color-midnights-pink-dark: #5d3835;
+
+  --color-midnights-yellow: #968861;
+  --color-midnights-yellow-bright: #c08811;
+  --color-midnights-yellow-bright-hover: #98701c;
+  --color-midnights-yellow-dark: #745e2f;
+
   --color-navigation: #fff;
-  /* --color-background: #252a33; */
-  --color-background: #e8eee9;
+  --color-background: #f3f3f3;
+
   --color-card: #fff;
   --color-outline: rgba(0, 0, 0, 0);
+
   --color-light-gray: #7e7e7e;
   --color-info-dark: #353334;
 
   --color-header: #363636;
   --color-body: var(--color-info-dark);
-
-  --color-navigation-body: #1e594a;
-
-  /** CSS DARK THEME PRIMARY COLORS */
-  --color-primary-100: #275449;
-  --color-primary-200: #326e5f;
-  --color-primary-300: #2e7060;
-  --color-primary-400: #629b8d;
-  --color-primary-500: #91afa7;
-  --color-primary-600: #c4dad5;
-
-  /** CSS DARK THEME SURFACE COLORS */
-  --color-surface-100: #1c1f21;
-  --color-surface-200: #313436;
-  --color-surface-300: #474a4c;
-  --color-surface-400: #5f6163;
-  --color-surface-500: #77797b;
-  --color-surface-600: #919394;
-
-  /** CSS DARK THEME MIXED SURFACE COLORS */
-  --color-surface-mixed-100: #1f343f;
-  --color-surface-mixed-200: #354852;
-  --color-surface-mixed-300: #4c5c65;
-  --color-surface-mixed-400: #63717a;
-  --color-surface-mixed-500: #7c888f;
-  --color-surface-mixed-600: #959ea4;
+  --color-navigation-body: var(--color-midnights-green-dark);
 
   --color-white: #fff;
-  --color-accent: #6f9b91;
+  --color-accent: var(--color-midnights-green);
   --color-accent-hover: #1e4b40;
 
   /*--color-accent-select: #a9a9a9;*/
   --color-transparent: rgba(201, 201, 201, 0.38);
   --color-transparent-button: #252a3343;
 
-  --color-add-icon: #08a837;
-  --color-add-icon-hover: #09852c;
-  --color-delete-icon: #d02929;
-  --color-delete-icon-hover: #b00909;
+  --color-add-icon: var(--color-midnights-green-bright);
+  --color-add-icon-hover: var(--color-midnights-green-bright-hover);
+  --color-delete-icon: var(--color-midnights-pink-bright);
+  --color-delete-icon-hover: var(--color-midnights-pink-bright-hover);
 
   --card-border-radius: 1rem;
   --border-radius-1: 0.5rem;
@@ -338,7 +334,7 @@ td {
 
 th,
 tr {
-  border-bottom: 1px solid var(--color-surface-400);
+  border-bottom: 1px solid var(--color-light-gray);
 }
 
 tr:last-child {
@@ -438,9 +434,13 @@ width: 20rem;
   background-color: var(--color-delete-icon-hover);
 } */
 
-.edit-icon:hover {
-  color: var(--color-accent);
+.edit-icon {
+  color: var(--color-midnights-yellow-bright);
   transition: all 300ms ease;
+}
+
+.edit-icon:hover {
+  color: var(--color-midnights-yellow-bright-hover);
 }
 
 .edit-button {
@@ -453,12 +453,12 @@ width: 20rem;
   align-items: center;
   border-radius: var(--border-radius-1);
   box-shadow: var(--box-shadow-button);
-  background-color: var(--color-accent);
+  background-color: var(--color-midnights-yellow-bright);
   color: var(--color-white);
 }
 
 .edit-button:hover {
-  background-color: var(--color-accent-hover);
+  background-color: var(--color-midnights-yellow-bright-hover);
 
 }
 

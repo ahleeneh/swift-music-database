@@ -52,12 +52,6 @@ function AlbumUpdateForm({ selectedAlbum, onUpdate }) {
 
             <form onSubmit={(e) => { e.preventDefault(); }}>
 
-                <p>Album ID: {editAlbumId}</p>
-                <p>Album Title: {editAlbumTitle}</p>
-                <p>Album ReleaseDate: {editReleaseDate}</p>
-                <p>Album Descritipon: {editDescription}</p>
-
-
                 <label htmlFor="updateAlbumTitle">Name:
                     <input
                         type="text"
