@@ -653,3 +653,25 @@ select {
   padding: 1rem;
   color: var(--color-info-dark);
 } */
+
+
+/* Add custom styling for Song Genres */
+.song-genres-list-item {
+  position: relative;
+}
+
+.song-genres-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  z-index: 1;
+}
+
+.song-genres-list-item:hover .song-genres-dropdown {
+  display: block;
+}
