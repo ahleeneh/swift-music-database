@@ -39,14 +39,14 @@ INSERT INTO Genres (genreName)
         ('Chillwave'),
         ('Americana');
 
-INSERT INTO Tours (tourName, tourStartDate, tourDescription)
+INSERT INTO Tours (tourName, tourStartDate, tourEndDate, tourDescription)
     VALUES
-        ('Fearless Tour', '2009-04-23', 'The Fearless Tour was the first headlining concert tour by American singer-songwriter Taylor Swift, launched in support of her second studio album, Fearless (2008). Big Machine Records announced the first 52-date North American leg in January 2009; before the tour began on April 23, 2009, in Evansville, U.S., Swift had headlined music festivals in North America. Through 2009, Swift announced additional dates in the United Kingdom, Australia, and Japan, and the Fearless Tour concluded on July 10, 2010, in Cavendish, Canada. Kellie Pickler, Gloriana, and Justin Bieber were supporting acts.'),
-        ('Speak Now World Tour', '2011-02-09', 'The Speak Now World Tour was the second concert tour by American singer-songwriter Taylor Swift, launched in support of her third studio album Speak Now (2010). The Speak Now World Tour began on February 9, 2011, in Singapore and ended on March 18, 2012, in Auckland, New Zealand.'),
-        ('The Red Tour', '2013-03-13', 'The Red Tour was the third concert tour by American singer-songwriter Taylor Swift, launched in support of her fourth studio album, Red (2012). The tour started on March 13, 2013, at CenturyLink Center in Omaha, Nebraska and concluded on June 12, 2014, at Singapore Indoor Stadium in Singapore. The tour was attended by 1.7 million people and grossed $150.2 million in revenue.'),
-        ('The 1989 World Tour', '2015-05-05', 'The 1989 World Tour was the fourth concert tour by American singer-songwriter Taylor Swift, launched in support of her fifth studio album, 1989 (2014). Swift announced the tour''s first dates in North America, Europe, Japan, and Oceania in November and December 2014. She announced additional dates for Singapore and China in June 2015, and a final announcement of the third show in Melbourne was made the following month.'),
-        ('Reputation Stadium Tour', '2018-05-08', 'The Reputation Stadium Tour was the fifth concert tour by American singer-songwriter Taylor Swift, launched in support of her sixth studio album Reputation (2017). The all-stadium tour began on May 8, 2018, in Glendale, Arizona, and concluded on November 21, 2018, in Tokyo, consisting of 53 shows. The tour received 2.88 million attendees and grossed $345.7 million in revenue. It marked Swift''s most successful tour to-date and broke numerous boxscore records, becoming the third highest-grossing female concert tour of all time and the highest-grossing tour ever in the United States and North America.'),
-        ('The Eras Tour', '2023-03-17', 'The Eras Tour (stylized as Taylor Swift | The Eras Tour) is the ongoing sixth concert tour by American singer-songwriter Taylor Swift, who described it as a journey through all of her musical "eras".[1] A homage to her albums, the Eras Tour is her most expansive tour yet, with 146 shows across five continents. It is her second all-stadium tour after the 2018 Reputation Stadium Tour.');
+        ('Fearless Tour', '2009-04-23', '2010-07-10', 'The Fearless Tour was the first headlining concert tour by American singer-songwriter Taylor Swift, launched in support of her second studio album, Fearless (2008). Big Machine Records announced the first 52-date North American leg in January 2009; before the tour began on April 23, 2009, in Evansville, U.S., Swift had headlined music festivals in North America. Through 2009, Swift announced additional dates in the United Kingdom, Australia, and Japan, and the Fearless Tour concluded on July 10, 2010, in Cavendish, Canada. Kellie Pickler, Gloriana, and Justin Bieber were supporting acts.'),
+        ('Speak Now World Tour', '2011-02-09', '2012-03-18', 'The Speak Now World Tour was the second concert tour by American singer-songwriter Taylor Swift, launched in support of her third studio album Speak Now (2010). The Speak Now World Tour began on February 9, 2011, in Singapore and ended on March 18, 2012, in Auckland, New Zealand.'),
+        ('The Red Tour', '2013-03-13', '2014-06-12', 'The Red Tour was the third concert tour by American singer-songwriter Taylor Swift, launched in support of her fourth studio album, Red (2012). The tour started on March 13, 2013, at CenturyLink Center in Omaha, Nebraska and concluded on June 12, 2014, at Singapore Indoor Stadium in Singapore. The tour was attended by 1.7 million people and grossed $150.2 million in revenue.'),
+        ('The 1989 World Tour', '2015-05-05', '2015-12-12', 'The 1989 World Tour was the fourth concert tour by American singer-songwriter Taylor Swift, launched in support of her fifth studio album, 1989 (2014). Swift announced the tour''s first dates in North America, Europe, Japan, and Oceania in November and December 2014. She announced additional dates for Singapore and China in June 2015, and a final announcement of the third show in Melbourne was made the following month.'),
+        ('Reputation Stadium Tour', '2018-05-08', '2018-11-21', 'The Reputation Stadium Tour was the fifth concert tour by American singer-songwriter Taylor Swift, launched in support of her sixth studio album Reputation (2017). The all-stadium tour began on May 8, 2018, in Glendale, Arizona, and concluded on November 21, 2018, in Tokyo, consisting of 53 shows. The tour received 2.88 million attendees and grossed $345.7 million in revenue. It marked Swift''s most successful tour to-date and broke numerous boxscore records, becoming the third highest-grossing female concert tour of all time and the highest-grossing tour ever in the United States and North America.'),
+        ('The Eras Tour', '2023-03-17', NULL, 'The Eras Tour (stylized as Taylor Swift | The Eras Tour) is the ongoing sixth concert tour by American singer-songwriter Taylor Swift, who described it as a journey through all of her musical "eras".[1] A homage to her albums, the Eras Tour is her most expansive tour yet, with 146 shows across five continents. It is her second all-stadium tour after the 2018 Reputation Stadium Tour.');
 
 INSERT INTO Setlists (setlistName)
 VALUES
@@ -210,15 +210,15 @@ INSERT INTO Lyrics (songId, lyricsText)
             I''ll stare directly at the sun but never in the mirror
             It must be exhausting always rooting for the anti-hero');
 
-INSERT INTO Concerts (concertName, concertVenue, concertLocation, concertDateTime, tourId)
+INSERT INTO Concerts (concertName, concertVenue, concertLocation, concertDateTime, tourId, setlistId)
     VALUES
-        ('Glendale Night 1', 'State Farm Stadium', 'Glendale, AZ', '2023-03-17 18:30:00', 6),
-        ('Glendale Night 2', 'State Farm Stadium', 'Glendale, AZ', '2023-03-18 18:30:00', 6),
-        ('Las Vegas Night 1', 'Allegiant Stadium', 'Las Vegas, NV','2023-03-24 18:30:00', 6),
-        ('Las Vegas Night 1', 'Allegiant Stadium', 'Las Vegas, NV', '2023-03-25 18:30:00', 6),
-        ('Arlington Night 1', 'AT&T Stadium', 'Arlington, TX', '2023-03-31 18:30:00', 6),
-        ('Arlington Night 2', 'AT&T Stadium', 'Arlington, TX', '2023-04-01 18:30:00', 6),
-        ('Arlington Night 3', 'AT&T Stadium', 'Arlington, TX', '2023-04-02 18:30:00', 6);
+        ('Glendale Night 1', 'State Farm Stadium', 'Glendale, AZ', '2023-03-17 18:30:00', 6, 1),
+        ('Glendale Night 2', 'State Farm Stadium', 'Glendale, AZ', '2023-03-18 18:30:00', 6, 2),
+        ('Las Vegas Night 1', 'Allegiant Stadium', 'Las Vegas, NV','2023-03-24 18:30:00', 6, NULL),
+        ('Las Vegas Night 1', 'Allegiant Stadium', 'Las Vegas, NV', '2023-03-25 18:30:00', 6, NULL),
+        ('Arlington Night 1', 'AT&T Stadium', 'Arlington, TX', '2023-03-31 18:30:00', 6, NULL),
+        ('Arlington Night 2', 'AT&T Stadium', 'Arlington, TX', '2023-04-01 18:30:00', 6, NULL),
+        ('Arlington Night 3', 'AT&T Stadium', 'Arlington, TX', '2023-04-02 18:30:00', 6, NULL);
 
 INSERT INTO SongGenres (songId, genreId)
     VALUES
