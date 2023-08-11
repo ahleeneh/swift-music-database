@@ -1,7 +1,7 @@
 import React from 'react';
-// import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
-function AlbumsTable({ data }) {
+function AlbumsTable({ data, onEdit }) {
     return (
         <table>
             <thead>
@@ -10,7 +10,7 @@ function AlbumsTable({ data }) {
                 <th>Album Title</th>
                 <th>Release Date</th>
                 <th>Description</th>
-                {/*<th>Edit</th>*/}
+                <th>Edit</th>
             </tr>
             </thead>
             <tbody>
@@ -20,11 +20,11 @@ function AlbumsTable({ data }) {
                     <td>{d.albumTitle}</td>
                     <td>{d.releaseDate}</td>
                     <td>{d.description}</td>
-                    {/*<td>*/}
-                    {/*    <button className="edit-icon" onClick={() => onEdit(d)}>*/}
-                    {/*        <EditOutlinedIcon />*/}
-                    {/*    </button>*/}
-                    {/*</td>*/}
+                    <td>
+                        <button className="edit-icon" onClick={() => onEdit(d)}>
+                            <EditOutlinedIcon />
+                        </button>
+                    </td>
                 </tr>
             ))}
             </tbody>

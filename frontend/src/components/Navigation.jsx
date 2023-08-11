@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 
-import vinylLogo from '../img/vinyl-logo.png';
+import vinylLogo from '../img/vinyl-logo-2.png';
 
 function Navigation() {
     return (
         <nav className="App-nav">
             <Link to="/">
-                <img src={vinylLogo} alt="Taylor Swift Database Logo" style={{ width: '50%' }} />
+                <img src={vinylLogo} alt="Taylor Swift Database Logo" style={{ width: '100%' }} />
             </Link>
 
             <ul className="nav-list">

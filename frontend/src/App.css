@@ -1,14 +1,16 @@
 :root {
-  --color-navigation: #191f2c;
+  --color-navigation: #fff;
   /* --color-background: #252a33; */
-  --color-background: #191f2c;
-  --color-card: #232c3b;
+  --color-background: #e8eee9;
+  --color-card: #fff;
   --color-outline: rgba(0, 0, 0, 0);
+  --color-light-gray: #7e7e7e;
+  --color-info-dark: #353334;
 
-  --color-header: #fff;
-  --color-body: #fff;
+  --color-header: #363636;
+  --color-body: var(--color-info-dark);
 
-  --color-navigation-body: #fff;
+  --color-navigation-body: #1e594a;
 
   /** CSS DARK THEME PRIMARY COLORS */
   --color-primary-100: #275449;
@@ -35,11 +37,11 @@
   --color-surface-mixed-600: #959ea4;
 
   --color-white: #fff;
-  --color-accent: #346c5d;
+  --color-accent: #6f9b91;
   --color-accent-hover: #1e4b40;
 
-  --color-accent-select: #284943;
-  --color-transparent: rgb(25, 31, 44);
+  /*--color-accent-select: #a9a9a9;*/
+  --color-transparent: rgba(201, 201, 201, 0.38);
   --color-transparent-button: #252a3343;
 
   --color-add-icon: #08a837;
@@ -48,7 +50,7 @@
   --color-delete-icon-hover: #b00909;
 
   --card-border-radius: 1rem;
-  --border-radius-1: 0.4rem;
+  --border-radius-1: 0.5rem;
   --border-radius-2: 0.8rem;
   --border-radius-3: 1.2rem;
   --card-padding: 1.8rem;
@@ -72,7 +74,7 @@
 
 .App-sidebar {
   width: 10rem;
-  flex: 0 0 10rem;
+  flex: 0 0 8rem;
   background-color: var(--color-navigation);
   border-right: 1px solid var(--color-outline);
   box-shadow: var(--box-shadow);
@@ -198,15 +200,25 @@ body {
   width: 100%;
   padding: 0.5rem;
   transition: all 300ms ease;
-  font-family: 'Space Mono', monospace;
+  /*font-family: 'Space Mono', monospace;*/
   font-weight: 200;
 }
 
 .nav-list li:hover {
-  color: var(--color-primary-100);
-  border-radius: var(--border-radius-1);
-  background-color: var(--color-accent);
+  /*color: var(--color-primary-100);*/
+  /*border-radius: var(--border-radius-1);*/
+  /*color: var(--color-accent);*/
+  /*background-color: var(--color-accent);*/
   cursor: pointer;
+  /*text-decoration: underline*/
+}
+
+.nav-list li a:hover {
+  /*color: var(--color-primary-100);*/
+  /*border-radius: var(--border-radius-1);*/
+  color: var(--color-accent);
+  /*background-color: var(--color-accent);*/
+  /*cursor: pointer;*/
 }
 
 
@@ -268,7 +280,7 @@ p {
 }
 
 .card h2 {
-  font-family: 'Space Mono', monospace;
+  /*font-family: 'Space Mono', monospace;*/
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   margin: 2rem 0;
@@ -298,7 +310,8 @@ body {
 
 footer {
   margin: 4rem;
-  color: white;
+  /*text-align: right;*/
+  /*color: white;*/
 }
 
 
@@ -318,7 +331,8 @@ th,
 td {
   text-align: left;
   padding: 1.2rem;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
+  line-height: 1.4rem;
 }
 
 
@@ -369,7 +383,7 @@ width: 20rem;
   align-items: center;
   border-radius: var(--border-radius-1);
   box-shadow: var(--box-shadow-button);
-  font-family: 'Space Mono', monospace;
+  /*font-family: 'Space Mono', monospace;*/
   background-color: var(--color-delete-icon);
   color: var(--color-white);
   margin-right: 1rem;
@@ -380,7 +394,7 @@ width: 20rem;
 }
 
 .add-icon {
-  font-family: 'Space Mono', monospace;
+  /*font-family: 'Space Mono', monospace;*/
 
   display: flex;
   justify-content: center;
@@ -468,14 +482,14 @@ width: 20rem;
 }
 
 .modal {
-  background-color: var(--color-background);
-  /* padding: 2rem; */
+  background-color: var(--color-white);
+   /*padding: 2rem; */
   border-radius: var(--border-radius-1);
   box-shadow: var(--box-shadow);
   max-width: 80%;
   max-width: 900px;
   position: relative;
-  margin-top: 12rem;
+  margin-top: 3rem;
   border: 1px solid var(--color-outline);
   transition: all 300ms ease;
 }
@@ -516,7 +530,7 @@ form {
   flex-direction: column;
   align-items: flex-start;
   font-size: 1rem;
-  color: var(--color-white);
+  /*color: var(--color-white);*/
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
@@ -525,6 +539,7 @@ form {
   font-size: 1.4rem;
   font-family: 'Space Mono', monospace;
   margin-bottom: 2rem;
+  color: var(--color-inf-dark);
 }
 
 
@@ -542,12 +557,26 @@ select {
   margin: 0.5rem 0 2rem 0;
   box-sizing: border-box;
   padding: 1rem;
-  background-color: var(--color-background);
-  color: var(--color-white);
-  border: 1px solid var(--color-white);
+  /*background-color: var(--color-white);*/
+  color: var(--color-info-dark);
+  border: 1px solid var(--color-light-gray);
   border-radius: var(--border-radius-1);
 }
 
+
+textarea {
+  font-size: 1rem;
+  margin: 0.5rem 0 2rem 0;
+  /*background-color: var(--color-background);*/
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--border-radius-1);
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color: var(--color-info-dark);
+  height: 14rem;
+  padding: 1rem;
+}
 
 /* input {
   width: 100%;
