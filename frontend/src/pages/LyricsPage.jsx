@@ -19,7 +19,6 @@ function LyricsPage() {
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
     const [selectedLyric, setSelectedLyric] = useState(false);
 
-
     // send a GET request to view all Lyrics
     const getLyrics = async () => {
         try {

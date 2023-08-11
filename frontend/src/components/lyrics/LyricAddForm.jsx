@@ -81,7 +81,7 @@ function LyricAddForm({ onAdd }) {
                     type="button"
                     className="add-icon"
                     onClick={addData}>
-                    Add Song
+                    Add Lyrics
                 </button>
             </form>
         </div>

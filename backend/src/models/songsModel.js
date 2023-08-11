@@ -10,7 +10,7 @@ exports.getAllSongs = (callback) => {
             SUBSTRING(Songs.songDuration, 4, 5) AS songDuration, 
             Albums.albumTitle, 
             IFNULL(Songs.featuredArtist, 'N/A') AS featuredArtist,
-            GROUP_CONCAT(Genres.genreName SEPARATOR ', ') AS songGenres
+            IFNULL(GROUP_CONCAT(Genres.genreName SEPARATOR ', '), 'Uncategorized') AS songGenres
         FROM Songs
         JOIN Albums ON Songs.albumId = Albums.albumId
         LEFT JOIN SongGenres ON Songs.songId = SongGenres.songId
