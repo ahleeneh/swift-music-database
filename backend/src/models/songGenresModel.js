@@ -30,6 +30,16 @@ exports.addSongGenre = (songId, genreId, callback) => {
     db.pool.query(queryAddSongGenre, [songId, genreId], callback);
 }
 
+// update a Song Genre to the database
+exports.updateSongGenre = (genreId, songGenreId, callback) => {
+    const queryUpdateSongGenre = `
+        UPDATE SongGenres
+        SET 
+            genreId = ?
+        WHERE songGenreId = ?`;
+    db.pool.query(queryUpdateSongGenre, [genreId, songGenreId], callback)
+}
+
 // delete a Song Genre from the database
 exports.deleteSongGenre = (songGenreId, callback) => {
     const queryDeleteSongGenre = `

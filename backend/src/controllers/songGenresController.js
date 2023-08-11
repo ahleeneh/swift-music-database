@@ -43,10 +43,10 @@ exports.addSongGenre = (req, res) => {
 
 //  handler to update a Song Genre
 exports.updateSongGenre = (req, res) => {
-    const { songId, genreId } = req.body;
+    const { genreId } = req.body;
     const songGenreId = req.params.songGenreId;
 
-    songGenresModel.updateSongGenre(songId, genreId, songGenreId, (error, data) => {
+    songGenresModel.updateSongGenre(genreId, songGenreId, (error, data) => {
         if (error) {
             res.status(500).json({ Error: 'Internal Server Error' });
             console.error(error)

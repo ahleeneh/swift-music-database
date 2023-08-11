@@ -1,7 +1,7 @@
 import React from 'react';
-// import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
-function SongGenresTable({ data }) {
+function SongGenresTable({ data, onEdit }) {
     return (
         <table>
             <thead>
@@ -9,7 +9,7 @@ function SongGenresTable({ data }) {
                 <th>Song Genre ID</th>
                 <th>Song ID</th>
                 <th>Genre ID</th>
-                {/*<th>Edit</th>*/}
+                <th>Edit</th>
             </tr>
             </thead>
             <tbody>
@@ -18,11 +18,11 @@ function SongGenresTable({ data }) {
                     <td>{d.songGenreId}</td>
                     <td>{d.songTitle}</td>
                     <td>{d.genreName}</td>
-                    {/*<td>*/}
-                    {/*    <button className="edit-icon" onClick={() => onEdit(d)}>*/}
-                    {/*        <EditOutlinedIcon />*/}
-                    {/*    </button>*/}
-                    {/*</td>*/}
+                    <td>
+                        <button className="edit-icon" onClick={() => onEdit(d)}>
+                            <EditOutlinedIcon />
+                        </button>
+                    </td>
                 </tr>
             ))}
             </tbody>
