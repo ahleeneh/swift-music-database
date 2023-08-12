@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
+import { Link } from 'react-router-dom';
 import SongsTable from '../components/songs/SongsTable';
 import SongAddForm from '../components/songs/SongAddForm';
 import SongDeleteForm from '../components/songs/SongDeleteForm';
@@ -8,8 +9,10 @@ import Axios from 'axios';
 
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import PageviewOutlinedIcon from '@mui/icons-material/PageviewOutlined';
 
 function SongsPage() {
+
     // store data fetched from backend
     const [data, setData] = useState([])
 
@@ -49,12 +52,30 @@ function SongsPage() {
 
             <div className="card">
 
+                <div className="breadcrumbs">
+                    <Link to="/">Home </Link> /
+                    <span> Songs </span>
+                </div>
+
+
                 <div className="card-header">
                     <div className="card-header-left">
                         <h2>Songs</h2>
                     </div>
 
                     <div className="card-header-right">
+                        <Link to="/genres">
+                            <button
+                                className="view-icon">
+                                <PageviewOutlinedIcon/>GENRE CATALOG
+                            </button>
+                        </Link>
+                        <Link to="/song-genres">
+                            <button
+                                className="view-icon">
+                                <PageviewOutlinedIcon/>GENRE MAPPING
+                            </button>
+                        </Link>
                         <button
                             className="add-icon"
                             onClick={() => setIsAddModalOpen(true)}>
@@ -69,7 +90,7 @@ function SongsPage() {
 
                 </div>
 
-                <SongsTable data={data} onEdit={openEditModal}/>
+                <SongsTable data={data} onEdit={openEditModal} itemsPerPage={20}/>
 
             </div>
 

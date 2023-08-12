@@ -1,7 +1,7 @@
 :root {
   --color-midnights-blue: #5e6883;
-  --color-midnights-blue-bright: #1831a8;
-  --color-midnights-blue-bright-hover: #273ca1;
+  --color-midnights-blue-bright: #2939a1;
+  --color-midnights-blue-bright-hover: #1d286b;
   --color-midnights-blue-dark: #3f476c;
 
   --color-midnights-green: #718281;
@@ -230,6 +230,7 @@ body {
 .icon-container {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
 }
 
 
@@ -243,6 +244,13 @@ body {
   cursor: pointer;
   border-radius: var(--border-radius-1);
 }
+
+
+
+
+
+
+
 
 /* 
   TYPOGRAPHY
@@ -260,6 +268,11 @@ h3 {
 p {
   line-height: 2.5rem;
 }
+
+a {
+  text-decoration: none;
+}
+
 
 
 /* 
@@ -310,6 +323,10 @@ footer {
   /*color: white;*/
 }
 
+.breadcrumbs {
+  padding: 1rem 1rem 0 1rem;
+  color: var(--color-info-dark);
+}
 
 
 /*  
@@ -356,19 +373,6 @@ button {
   outline: none;
 }
 
-/* button {
-background-color: var(--color-accent);
-color: var(--color-white);
-font-size: 1.2rem;
-padding: 1.5rem 2rem;
-border-radius: var(--border-radius-2);
-transition: all 300ms ease;
-cursor: pointer;
-box-shadow: var(--box-shadow);
-width: 20rem;
-} */
-
-
 .delete-icon {
   display: flex;
   justify-content: center;
@@ -378,8 +382,6 @@ width: 20rem;
   float: right;
   align-items: center;
   border-radius: var(--border-radius-1);
-  /*box-shadow: var(--box-shadow-button);*/
-  /*font-family: 'Space Mono', monospace;*/
   background-color: var(--color-delete-icon);
   color: var(--color-white);
   margin-right: 1rem;
@@ -390,8 +392,6 @@ width: 20rem;
 }
 
 .add-icon {
-  /*font-family: 'Space Mono', monospace;*/
-
   display: flex;
   justify-content: center;
   padding: 0.5rem 1rem;
@@ -400,38 +400,13 @@ width: 20rem;
   float: right;
   align-items: center;
   border-radius: var(--border-radius-1);
-
-
   background-color: var(--color-add-icon);
   color: var(--color-white);
 }
 
 .add-icon:hover {
   background-color: var(--color-add-icon-hover);
-
 }
-
-/* .delete-icon {
-  font-family: 'Space Mono', monospace;
-
-  display: flex;
-  justify-content: center;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: all 300ms ease;
-  float: right;
-  align-items: center;
-  border-radius: var(--border-radius-1);
-  box-shadow: var(--box-shadow-button);
-
-  background-color: var(--color-delete-icon);
-  color: var(--color-white);
-  margin-right: 1rem;
-}
-
-.delete-icon:hover {
-  background-color: var(--color-delete-icon-hover);
-} */
 
 .edit-icon {
   color: var(--color-midnights-yellow-bright);
@@ -458,8 +433,30 @@ width: 20rem;
 
 .edit-button:hover {
   background-color: var(--color-midnights-yellow-bright-hover);
-
 }
+
+.view-icon {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+  float: right;
+  align-items: center;
+  border-radius: var(--border-radius-1);
+  background-color: var(--color-midnights-blue-bright);
+  color: var(--color-white);
+  height: 100%;
+}
+
+.view-icon a {
+  color: var(--color-white);
+  margin-left: 0.2rem;
+}
+.view-icon:hover {
+  background-color: var(--color-midnights-blue-bright-hover);
+}
+
 
 
 /*
@@ -675,3 +672,33 @@ select {
 .song-genres-list-item:hover .song-genres-dropdown {
   display: block;
 }
+
+/*
+  PAGINATION
+ */
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.3rem;
+  justify-content: center;
+
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: var(--color-midnights-green-dark);
+  border-radius: var(--border-radius-1);
+}
+
+.pagination button:hover {
+  background-color: var(--color-midnights-green);
+}
+
+.pagination button.active {
+  background-color: var(--color-midnights-green);
+  color: var(--color-white);
+}
+

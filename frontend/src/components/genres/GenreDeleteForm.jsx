@@ -42,7 +42,7 @@ function GenreDeleteForm({ data, onDelete }) {
 
                         {data.map((d, i) => (
                             <option key={i} value={d.genreId}>
-                                {d.genreName}
+                                ({d.genreId}) {d.genreName}
                             </option>
                         ))}
                     </select>

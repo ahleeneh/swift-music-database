@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ConcertsTable from '../components/concerts/ConcertsTable';
 import ConcertAddForm from '../components/concerts/ConcertAddForm';
 import ConcertDeleteForm from '../components/concerts/ConcertDeleteForm';
@@ -49,6 +50,11 @@ function ConcertsPage() {
 
             <div className="card">
 
+                <div className="breadcrumbs">
+                    <Link to="/">Home </Link> /
+                    <span> Concerts </span>
+                </div>
+
                 <div className="card-header">
                     <div className="card-header-left">
                         <h2>Concerts</h2>
@@ -69,7 +75,7 @@ function ConcertsPage() {
 
                 </div>
 
-                <ConcertsTable data={data} onEdit={openEditModal}/>
+                <ConcertsTable data={data} onEdit={openEditModal} itemsPerPage={20}/>
 
             </div>
 

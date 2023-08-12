@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import SetlistSongsTable from '../components/setlistSongs/SetlistSongsTable';
 import SetlistSongAddForm from '../components/setlistSongs/SetlistSongAddForm';
 import SetlistSongDeleteForm from '../components/setlistSongs/SetlistSongDeleteForm';
@@ -48,6 +49,12 @@ function SetlistSongsPage() {
         <div>
 
             <div className="card">
+
+                <div className="breadcrumbs">
+                    <Link to="/">Home </Link> /
+                    <Link to="/setlists"> Setlists </Link> /
+                    <span> Setlist Songs</span>
+                </div>
 
                 <div className="card-header">
                     <div className="card-header-left">

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { Link } from 'react-router-dom';
 import SongGenresTable from '../components/songGenres/SongGenresTable';
 import SongGenreAddForm from '../components/songGenres/SongGenreAddForm';
 import SongGenreDeleteForm from '../components/songGenres/SongGenreDeleteForm';
@@ -49,6 +50,12 @@ function SongGenresPage() {
 
             <div className="card">
 
+                <div className="breadcrumbs">
+                    <Link to="/">Home </Link> /
+                    <Link to="/songs"> Songs </Link> /
+                    <span> Song Genres</span>
+                </div>
+
                 <div className="card-header">
                     <div className="card-header-left">
                         <h2>Song Genres</h2>
@@ -69,7 +76,7 @@ function SongGenresPage() {
 
                 </div>
 
-                <SongGenresTable data={data} onEdit={openEditModal}/>
+                <SongGenresTable data={data} onEdit={openEditModal} itemsPerPage={20}/>
 
             </div>
 

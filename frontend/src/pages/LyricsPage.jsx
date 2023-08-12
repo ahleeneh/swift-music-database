@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import LyricsTable from '../components/lyrics/LyricsTable';
 import LyricAddForm from '../components/lyrics/LyricAddForm';
 import LyricDeleteForm from '../components/lyrics/LyricDeleteForm';
@@ -49,6 +50,11 @@ function LyricsPage() {
 
             <div className="card">
 
+                <div className="breadcrumbs">
+                    <Link to="/">Home </Link> /
+                    <span> Lyrics </span>
+                </div>
+
                 <div className="card-header">
                     <div className="card-header-left">
                         <h2>Lyrics</h2>
@@ -69,7 +75,7 @@ function LyricsPage() {
 
                 </div>
 
-                <LyricsTable data={data} onEdit={openEditModal}/>
+                <LyricsTable data={data} onEdit={openEditModal} itemsPerPage={10}/>
 
             </div>
 

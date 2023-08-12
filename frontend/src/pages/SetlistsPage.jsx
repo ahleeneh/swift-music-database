@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import SetlistsTable from '../components/setlists/SetlistsTable';
 import SetlistAddForm from '../components/setlists/SetlistAddForm';
 import SetlistDeleteForm from '../components/setlists/SetlistDeleteForm';
@@ -8,6 +9,7 @@ import Axios from 'axios';
 
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import PageviewOutlinedIcon from "@mui/icons-material/PageviewOutlined";
 
 function SetlistsPage() {
     // store data fetched from backend
@@ -49,12 +51,23 @@ function SetlistsPage() {
 
             <div className="card">
 
+                <div className="breadcrumbs">
+                    <Link to="/">Home </Link> /
+                    <span> Setlists </span>
+                </div>
+
                 <div className="card-header">
                     <div className="card-header-left">
                         <h2>Setlists</h2>
                     </div>
 
                     <div className="card-header-right">
+                        <Link to="/setlist-songs">
+                            <button
+                                className="view-icon">
+                                <PageviewOutlinedIcon/>SETLIST SONGS
+                            </button>
+                        </Link>
                         <button
                             className="add-icon"
                             onClick={() => setIsAddModalOpen(true)}>

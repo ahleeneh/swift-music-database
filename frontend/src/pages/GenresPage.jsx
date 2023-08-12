@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { Link } from 'react-router-dom';
 import GenresTable from '../components/genres/GenresTable';
 import GenreAddForm from '../components/genres/GenreAddForm';
 import GenreDeleteForm from '../components/genres/GenreDeleteForm';
@@ -49,6 +50,12 @@ function GenresPage() {
 
             <div className="card">
 
+                <div className="breadcrumbs">
+                    <Link to="/">Home </Link> /
+                    <Link to="/songs"> Songs </Link> /
+                    <span> Genres</span>
+                </div>
+
                 <div className="card-header">
                     <div className="card-header-left">
                         <h2>Genres</h2>
@@ -69,7 +76,7 @@ function GenresPage() {
 
                 </div>
 
-                <GenresTable data={data} onEdit={openEditModal}/>
+                <GenresTable data={data} onEdit={openEditModal} itemsPerPage={20}/>
 
             </div>
 

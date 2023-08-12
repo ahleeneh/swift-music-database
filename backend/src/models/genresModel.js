@@ -3,7 +3,7 @@ const db = require('../../db-connector');
 
 // get all Genres from the database
 exports.getAllGenres = (callback) => {
-    const queryGetAllGenres = `SELECT * FROM Genres;`;
+    const queryGetAllGenres = `SELECT * FROM Genres ORDER BY genreName;`;
     db.pool.query(queryGetAllGenres, callback);
 }
 

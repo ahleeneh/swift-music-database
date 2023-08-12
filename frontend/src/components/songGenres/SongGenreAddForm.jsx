@@ -66,7 +66,7 @@ function SongGenreAddForm({ onAdd }) {
 
             <form onSubmit={(e) => { e.preventDefault(); }}>
 
-                <label htmlFor="songId">NPC Name:
+                <label htmlFor="songId">Song:
                     <select
                         name="songId"
                         id="songId"

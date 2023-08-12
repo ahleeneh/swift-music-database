@@ -10,7 +10,8 @@ exports.getAllSongGenres = (callback) => {
             Genres.genreName
         FROM SongGenres
         JOIN Songs ON SongGenres.songId = Songs.songId
-        JOIN Genres ON SongGenres.genreId = Genres.genreId;`;
+        JOIN Genres ON SongGenres.genreId = Genres.genreId
+        ORDER BY SongGenres.songGenreId;`;
     db.pool.query(queryGetAllSongGenres, callback);
 }
 

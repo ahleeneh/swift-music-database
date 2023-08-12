@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ToursTable from '../components/tours/ToursTable';
 import TourAddForm from "../components/tours/TourAddForm";
 import TourDeleteForm from "../components/tours/TourDeleteForm";
@@ -49,6 +50,11 @@ function ToursPage() {
         <div>
 
             <div className="card">
+
+                <div className="breadcrumbs">
+                    <Link to="/">Home </Link> /
+                    <span> Tours </span>
+                </div>
 
                 <div className="card-header">
                     <div className="card-header-left">

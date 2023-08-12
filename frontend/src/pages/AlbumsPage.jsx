@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import AlbumsTable from '../components/albums/AlbumsTable';
 import AlbumAddForm from '../components/albums/AlbumAddForm';
 import AlbumDeleteForm from '../components/albums/AlbumDeleteForm';
@@ -49,6 +50,11 @@ function AlbumsPage() {
 
             <div className="card">
 
+                <div className="breadcrumbs">
+                    <Link to="/">Home </Link> /
+                    <span> Albums </span>
+                </div>
+
                 <div className="card-header">
                     <div className="card-header-left">
                         <h2>Albums</h2>
@@ -69,7 +75,7 @@ function AlbumsPage() {
 
                 </div>
 
-                <AlbumsTable data={data} onEdit={openEditModal}/>
+                <AlbumsTable data={data} onEdit={openEditModal} itemsPerPage={10}/>
 
             </div>
 

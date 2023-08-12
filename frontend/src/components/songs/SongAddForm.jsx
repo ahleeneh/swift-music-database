@@ -69,14 +69,6 @@ function SongAddForm({ onAdd }) {
                         onChange={(e) => setSongTitle(e.target.value)}/>
                 </label>
 
-                <label htmlFor="songDuration">Duration:
-                    <input
-                        type="text"
-                        placeholder="mm:ss"
-                        value={songDuration}
-                        onChange={(e) => setSongDuration(e.target.value)}/>
-                </label>
-
                 <label htmlFor="albumId">Album:
                     <select
                         name="albumId"
@@ -95,6 +87,14 @@ function SongAddForm({ onAdd }) {
                         ))}
 
                     </select>
+                </label>
+
+                <label htmlFor="songDuration">Duration:
+                    <input
+                        type="text"
+                        placeholder="mm:ss"
+                        value={songDuration}
+                        onChange={(e) => setSongDuration(e.target.value)}/>
                 </label>
 
                 <label htmlFor="featuredArtist">Featured Artist:

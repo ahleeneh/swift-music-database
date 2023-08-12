@@ -51,6 +51,8 @@ function ConcertUpdateForm({ selectedConcert, onUpdate }) {
         const matchingSetlist = setlistDropdown.find(setlist => setlist.setlistName === selectedConcert.setlistName);
         if (matchingSetlist) {
             setEditSetlistId(matchingSetlist.setlistId);
+        } else {
+            setEditSetlistId(null); // Handle the case when no matching setlist is found
         }
     }
 
@@ -165,8 +167,8 @@ function ConcertUpdateForm({ selectedConcert, onUpdate }) {
                     <select
                         name="updateSetlistId"
                         id="updateSetlistId"
-                        value={editSetlistId}
-                        onChange={(e) => setEditSetlistId(e.target.value)}>
+                        value={editSetlistId !== null ? editSetlistId : ''}
+                        onChange={(e) => setEditSetlistId(e.target.value !== '' ? e.target.value : null)}>
 
                         <option disabled value="">
                             Select Setlist

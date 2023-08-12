@@ -9,7 +9,8 @@ exports.getAllAlbums = (callback) => {
             albumTitle,
             DATE_FORMAT(releaseDate, '%Y-%m-%d') AS releaseDate,
             description
-        FROM Albums;`;
+        FROM Albums
+        ORDER BY releaseDate;`;
     db.pool.query(queryGetAllAlbums, callback);
 }
 
