@@ -9,9 +9,9 @@ exports.getAllConcerts = (callback) => {
             Concerts.concertName,
             Concerts.concertVenue,
             Concerts.concertLocation,
-            DATE_FORMAT(Concerts.concertDateTime, '%Y-%m-%d') AS concertDateTime,
+            DATE_FORMAT(Concerts.concertDate, '%Y-%m-%d') AS concertDate,
             Tours.tourName,
-            Setlists.setlistName
+            IFNULL(Setlists.setlistName, 'N/A') AS setlistName
         FROM Concerts
         JOIN Tours ON Concerts.tourId = Tours.tourId
         LEFT JOIN Setlists ON Concerts.setlistId = Setlists.setlistId;`;
@@ -27,26 +27,26 @@ exports.getConcertById = (concertId, callback) => {
 }
 
 // add a Concert to the database
-exports.addConcert = (concertName, concertVenue, concertLocation, concertDateTime, tourId, callback) => {
+exports.addConcert = (concertName, concertVenue, concertLocation, concertDate, tourId, callback) => {
     const queryAddConcert = `
-        INSERT INTO Concerts (concertName, concertVenue, concertLocation, concertDateTime, tourId)
+        INSERT INTO Concerts (concertName, concertVenue, concertLocation, concertDate, tourId)
         VALUES (?, ?, ?, ?, ?);`;
-    db.pool.query(queryAddConcert, [concertName, concertVenue, concertLocation, concertDateTime, tourId], callback);
+    db.pool.query(queryAddConcert, [concertName, concertVenue, concertLocation, concertDate, tourId], callback);
 }
 
 // update an existing Concert to the database
-exports.updateConcert = (concertName, concertVenue, concertLocation, concertDateTime, tourId, setlistId, concertId, callback) => {
+exports.updateConcert = (concertName, concertVenue, concertLocation, concertDate, tourId, setlistId, concertId, callback) => {
     const queryUpdateConcert = `
         UPDATE Concerts
         SET
             concertName = ?,
             concertVenue = ?,
             concertLocation = ?,
-            concertDateTime = ?,
+            concertDate = ?,
             tourId = ?,
             setlistId = ?
         WHERE concertId = ?;`;
-    db.pool.query(queryUpdateConcert, [concertName, concertVenue, concertLocation, concertDateTime, tourId, setlistId, concertId], callback);
+    db.pool.query(queryUpdateConcert, [concertName, concertVenue, concertLocation, concertDate, tourId, setlistId, concertId], callback);
 }
 
 // delete an existing Concert from the database

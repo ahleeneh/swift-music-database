@@ -1,13 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import ConcertsTable from '../components/concerts/ConcertsTable';
+import ConcertAddForm from '../components/concerts/ConcertAddForm';
+import ConcertDeleteForm from '../components/concerts/ConcertDeleteForm';
+import ConcertUpdateForm from '../components/concerts/ConcertUpdateForm';
+import Modal from '../components/Modal';
 import Axios from 'axios';
 
+import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
 function ConcertsPage() {
-    // store data fetched from ba ckend
+    // store data fetched from backend
     const [data, setData] = useState([])
 
-    // send a GET request to view all Items
+    // set state variables for modal components
+    const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+    const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+    const [selectedConcert, setSelectedConcert] = useState(false);
+
+    // send a GET request to view all Concerts
     const getConcerts = async () => {
         try {
             // send GET request
@@ -25,8 +37,13 @@ function ConcertsPage() {
         getConcerts();
     }, [])
 
+    // open the edit modal with the selected Concerts
+    const openEditModal = (concert) => {
+        setSelectedConcert(concert);
+        setIsEditModalOpen(true);
+    }
 
-    // return a div/card component that displays the Items table
+    // return a div/card component that displays the concerts table
     return (
         <div>
 
@@ -38,13 +55,55 @@ function ConcertsPage() {
                     </div>
 
                     <div className="card-header-right">
+                        <button
+                            className="add-icon"
+                            onClick={() => setIsAddModalOpen(true)}>
+                            <AddOutlinedIcon/>ADD
+                        </button>
+                        <button
+                            className="delete-icon"
+                            onClick={() => setIsDeleteModalOpen(true)}>
+                            <DeleteOutlineOutlinedIcon/>DELETE
+                        </button>
                     </div>
 
                 </div>
 
-                <ConcertsTable data={data}/>
+                <ConcertsTable data={data} onEdit={openEditModal}/>
 
             </div>
+
+            <Modal
+                isOpen={isAddModalOpen}
+                onClose={() => setIsAddModalOpen(false)}>
+                <ConcertAddForm
+                    onAdd={() => {
+                        getConcerts();
+                        setIsAddModalOpen(false);
+                    }}/>
+            </Modal>
+
+            <Modal
+                isOpen={isDeleteModalOpen}
+                onClose={() => setIsDeleteModalOpen(false)}>
+                <ConcertDeleteForm
+                    data={data}
+                    onDelete={() => {
+                        getConcerts();
+                        setIsDeleteModalOpen(false);
+                    }}/>
+            </Modal>
+
+            <Modal
+                isOpen={isEditModalOpen}
+                onClose={() => setIsEditModalOpen(false)}>
+                <ConcertUpdateForm
+                    selectedConcert={selectedConcert}
+                    onUpdate={() => {
+                        getConcerts();
+                        setIsEditModalOpen(false);
+                    }}/>
+            </Modal>
 
         </div>
     );

@@ -30,9 +30,9 @@ exports.getConcertById = (req, res) => {
 
 // handler to add a Concert
 exports.addConcert = (req, res) => {
-    const { concertName, concertVenue, concertLocation, concertDateTime, tourId } = req.body;
+    const { concertName, concertVenue, concertLocation, concertDate, tourId } = req.body;
 
-    concertsModel.addConcert(concertName, concertVenue, concertLocation, concertDateTime, tourId, (error, data) => {
+    concertsModel.addConcert(concertName, concertVenue, concertLocation, concertDate, tourId, (error, data) => {
         if (error) {
             res.status(500).json({ Error: 'Internal Server Error' });
         } else {
@@ -43,10 +43,10 @@ exports.addConcert = (req, res) => {
 
 // handler to update a Concert
 exports.updateConcert = (req, res) => {
-    const { concertName, concertVenue, concertLocation, concertDateTime, tourId, setlistId } = req.body;
+    const { concertName, concertVenue, concertLocation, concertDate, tourId, setlistId } = req.body;
     const concertId = req.params.concertId;
 
-    concertsModel.updateConcert(concertName, concertVenue, concertLocation, concertDateTime, tourId, setlistId, concertId, (error, data) => {
+    concertsModel.updateConcert(concertName, concertVenue, concertLocation, concertDate, tourId, setlistId, concertId, (error, data) => {
         if (error) {
             res.status(500).json({ Error: 'Internal Server Error' });
             console.error(error)

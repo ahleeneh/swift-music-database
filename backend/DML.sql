@@ -212,13 +212,13 @@ INSERT INTO Lyrics (songId, lyricsText)
 
 INSERT INTO Concerts (concertName, concertVenue, concertLocation, concertDateTime, tourId, setlistId)
     VALUES
-        ('Glendale Night 1', 'State Farm Stadium', 'Glendale, AZ', '2023-03-17 18:30:00', 12, 3),
-        ('Glendale Night 2', 'State Farm Stadium', 'Glendale, AZ', '2023-03-18 18:30:00', 12, 4),
-        ('Las Vegas Night 1', 'Allegiant Stadium', 'Las Vegas, NV','2023-03-24 18:30:00', 12, NULL),
-        ('Las Vegas Night 1', 'Allegiant Stadium', 'Las Vegas, NV', '2023-03-25 18:30:00', 12, NULL),
-        ('Arlington Night 1', 'AT&T Stadium', 'Arlington, TX', '2023-03-31 18:30:00', 12, NULL),
-        ('Arlington Night 2', 'AT&T Stadium', 'Arlington, TX', '2023-04-01 18:30:00', 12, NULL),
-        ('Arlington Night 3', 'AT&T Stadium', 'Arlington, TX', '2023-04-02 18:30:00', 12, NULL);
+        ('Glendale Night 1', 'State Farm Stadium', 'Glendale, AZ', '2023-03-17', 12, 3),
+        ('Glendale Night 2', 'State Farm Stadium', 'Glendale, AZ', '2023-03-18', 12, 4),
+        ('Las Vegas Night 1', 'Allegiant Stadium', 'Las Vegas, NV','2023-03-24', 12, NULL),
+        ('Las Vegas Night 1', 'Allegiant Stadium', 'Las Vegas, NV', '2023-03-25', 12, NULL),
+        ('Arlington Night 1', 'AT&T Stadium', 'Arlington, TX', '2023-03-31', 12, NULL),
+        ('Arlington Night 2', 'AT&T Stadium', 'Arlington, TX', '2023-04-01', 12, NULL),
+        ('Arlington Night 3', 'AT&T Stadium', 'Arlington, TX', '2023-04-02', 12, NULL);
 
 INSERT INTO SongGenres (songId, genreId)
     VALUES

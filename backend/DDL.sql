@@ -71,7 +71,7 @@ CREATE TABLE Concerts (
     concertName VARCHAR(100) NOT NULL,
     concertVenue VARCHAR(100) NOT NULL,
     concertLocation VARCHAR(100) NOT NULL,
-    concertDateTime DATETIME NOT NULL,
+    concertDate DATE NOT NULL,
     tourId INT NOT NULL,
     setlistId INT,
     CONSTRAINT concertId_unique UNIQUE (concertId),

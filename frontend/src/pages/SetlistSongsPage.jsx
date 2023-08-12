@@ -37,7 +37,7 @@ function SetlistSongsPage() {
         getSetlistSongs();
     }, [])
 
-    // open the edit modal with the selected Backpack
+    // open the edit modal with the selected Setlist Song
     const openEditModal = (setlistSong) => {
         setSelectedSetlistSong(setlistSong);
         setIsEditModalOpen(true);
