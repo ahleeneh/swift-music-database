@@ -35,7 +35,9 @@ function HomePage() {
                     You're in control here. Whether you're tweaking a tour, putting together a setlist, or diving into the different musical styles she's covered, it's all here for you to explore.</p>
                 <p>No need for any fancy stuff – just you, your computer, and the music.
                     So, go ahead and dive in. This is where you can work your magic with Taylor Swift's tunes, and the stage is all yours.</p>
+            </div>
 
+            {/*<div className="card">*/}
                 {data && (
                     <div className="small-card-container">
                         <div className="small-card small-card-yellow">
@@ -59,7 +61,8 @@ function HomePage() {
                         </div>
                     </div>
                 )}
-            </div>
+            {/*</div>*/}
+
         </div>
     )
 }

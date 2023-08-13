@@ -8,9 +8,9 @@ import SetlistViewSongs from '../components/setlists/SetlistViewSongs';
 import Modal from '../components/Modal';
 import Axios from 'axios';
 
-import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
-import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
+import AddRoundedIcon from '@mui/icons-material/AddRounded';
+import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
+import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 
 function SetlistsPage() {
     // store data fetched from backend
@@ -74,18 +74,18 @@ function SetlistsPage() {
                         <Link to="/setlist-songs">
                             <button
                                 className="view-icon">
-                                <EditNoteRoundedIcon/>SETLIST SONGS
+                                SETLIST SONGS<ArrowForwardRoundedIcon/>
                             </button>
                         </Link>
                         <button
                             className="add-icon"
                             onClick={() => setIsAddModalOpen(true)}>
-                            <AddOutlinedIcon/>ADD
+                            ADD<AddRoundedIcon/>
                         </button>
                         <button
                             className="delete-icon"
                             onClick={() => setIsDeleteModalOpen(true)}>
-                            <DeleteOutlineOutlinedIcon/>DELETE
+                            DELETE<DeleteRoundedIcon/>
                         </button>
                     </div>
 

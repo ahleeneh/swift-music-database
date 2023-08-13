@@ -1,5 +1,5 @@
 import React from 'react';
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import EditRoundedIcon from '@mui/icons-material/EditRounded';
 
 function ToursTable({ data, onEdit }) {
     return (
@@ -24,7 +24,7 @@ function ToursTable({ data, onEdit }) {
                     <td>{d.tourDescription}</td>
                     <td>
                         <button className="edit-icon" onClick={() => onEdit(d)}>
-                            <EditOutlinedIcon />
+                            <EditRoundedIcon />
                         </button>
                     </td>
                 </tr>

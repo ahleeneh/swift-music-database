@@ -7,9 +7,9 @@ import SongUpdateForm from '../components/songs/SongUpdateForm';
 import Modal from '../components/Modal';
 import Axios from 'axios';
 
-import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
-import PageviewOutlinedIcon from '@mui/icons-material/PageviewOutlined';
+import AddRoundedIcon from '@mui/icons-material/AddRounded';
+import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
+import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 
 function SongsPage() {
 
@@ -67,24 +67,24 @@ function SongsPage() {
                         <Link to="/genres">
                             <button
                                 className="view-icon">
-                                <PageviewOutlinedIcon/>GENRE CATALOG
+                                GENRE CATALOG<ArrowForwardRoundedIcon/>
                             </button>
                         </Link>
                         <Link to="/song-genres">
                             <button
                                 className="view-icon">
-                                <PageviewOutlinedIcon/>GENRE MAPPING
+                                GENRE MAPPING<ArrowForwardRoundedIcon/>
                             </button>
                         </Link>
                         <button
                             className="add-icon"
                             onClick={() => setIsAddModalOpen(true)}>
-                            <AddOutlinedIcon/>ADD
+                            ADD<AddRoundedIcon/>
                         </button>
                         <button
                             className="delete-icon"
                             onClick={() => setIsDeleteModalOpen(true)}>
-                            <DeleteOutlineOutlinedIcon/>DELETE
+                            DELETE<DeleteRoundedIcon/>
                         </button>
                     </div>
 

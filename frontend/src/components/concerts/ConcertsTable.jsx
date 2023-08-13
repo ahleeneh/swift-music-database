@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import Pagination from '../Pagination';
 import {calculatePagination} from '../../utils/paginationUtils';
 
@@ -41,7 +41,7 @@ function ConcertsTable({data, onEdit, itemsPerPage}) {
                         <td>{d.setlistName}</td>
                         <td>
                             <button className="edit-icon" onClick={() => onEdit(d)}>
-                                <EditOutlinedIcon/>
+                                <EditRoundedIcon/>
                             </button>
                         </td>
                     </tr>

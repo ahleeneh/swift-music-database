@@ -16,7 +16,7 @@ function Navigation() {
 
         <nav className="App-nav">
             <Link to="/">
-                <img src={vinylLogo} alt="Taylor Swift Database Logo" style={{ width: '100%' }} />
+                <img src={vinylLogo} alt="Taylor Swift Database Logo" style={{ width: '30%' , padding: '1rem'}} />
             </Link>
 
             <ul className="nav-list">

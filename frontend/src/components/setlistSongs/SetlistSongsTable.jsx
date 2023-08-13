@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import {calculatePagination} from '../../utils/paginationUtils';
 import Pagination from "../Pagination";
 
@@ -32,7 +32,7 @@ function SetlistSongsTable({data, onEdit, itemsPerPage}) {
                         <td>{d.songTitle}</td>
                         <td>
                             <button className="edit-icon" onClick={() => onEdit(d)}>
-                                <EditOutlinedIcon/>
+                                <EditRoundedIcon/>
                             </button>
                         </td>
                     </tr>

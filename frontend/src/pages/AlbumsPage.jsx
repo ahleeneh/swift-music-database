@@ -7,8 +7,8 @@ import AlbumUpdateForm from '../components/albums/AlbumUpdateForm';
 import Modal from '../components/Modal';
 import Axios from 'axios';
 
-import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import AddRoundedIcon from '@mui/icons-material/AddRounded';
+import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 
 function AlbumsPage() {
     // store data fetched from backend
@@ -64,12 +64,12 @@ function AlbumsPage() {
                         <button
                             className="add-icon"
                             onClick={() => setIsAddModalOpen(true)}>
-                            <AddOutlinedIcon />ADD
+                            ADD<AddRoundedIcon />
                         </button>
                         <button
                             className="delete-icon"
                             onClick={() => setIsDeleteModalOpen(true)}>
-                            <DeleteOutlineOutlinedIcon />DELETE
+                            DELETE<DeleteRoundedIcon />
                         </button>
                     </div>
 
