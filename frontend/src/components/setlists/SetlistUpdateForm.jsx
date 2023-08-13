@@ -39,7 +39,7 @@ function SetlistUpdateForm({ selectedSetlist, onUpdate }) {
     // return the update Setlist form
     return (
         <div className="form">
-            <legend>Update a Setlist</legend>
+            <legend>Update a Setlist Name</legend>
 
             <form onSubmit={(e) => { e.preventDefault(); }}>
 

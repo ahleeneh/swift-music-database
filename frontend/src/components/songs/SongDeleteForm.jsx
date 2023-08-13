@@ -25,7 +25,7 @@ function SongDeleteForm({ data, onDelete }) {
     // return the delete Song form
     return (
         <div className="form">
-            <legend>Delete Song</legend>
+            <legend>Delete a Song</legend>
 
             <form onSubmit={(e) => { e.preventDefault(); }}>
 
@@ -42,7 +42,7 @@ function SongDeleteForm({ data, onDelete }) {
 
                         {data.map((d, i) => (
                             <option key={i} value={d.songId}>
-                                {d.songTitle}
+                                ({d.songId}) {d.songTitle}
                             </option>
                         ))}
                     </select>

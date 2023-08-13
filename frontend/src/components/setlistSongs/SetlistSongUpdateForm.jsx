@@ -87,7 +87,7 @@ function SetlistSongUpdateForm({ selectedSetlistSong, onUpdate }) {
     // return the update Setlist Song form
     return (
         <div className="form">
-            <legend>Update Setlist Song</legend>
+            <legend>Update a Setlist Song</legend>
 
             <form onSubmit={(e) => { e.preventDefault(); }}>
 

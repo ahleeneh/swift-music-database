@@ -1,13 +1,15 @@
 import React from 'react';
-import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import EditRoundedIcon from '@mui/icons-material/EditRounded';
+import PageviewRoundedIcon from '@mui/icons-material/PageviewRounded';
 
-function SetlistsTable({ data, onEdit }) {
+function SetlistsTable({ data, onView, onEdit }) {
     return (
         <table>
             <thead>
             <tr>
                 <th>Setlist ID</th>
                 <th>Name</th>
+                <th>View Setlist</th>
                 <th>Edit</th>
             </tr>
             </thead>
@@ -17,8 +19,13 @@ function SetlistsTable({ data, onEdit }) {
                     <td>{d.setlistId}</td>
                     <td>{d.setlistName}</td>
                     <td>
+                        <button className="edit-icon" onClick={() => onView(d)}>
+                            <PageviewRoundedIcon />
+                        </button>
+                    </td>
+                    <td>
                         <button className="edit-icon" onClick={() => onEdit(d)}>
-                            <EditOutlinedIcon />
+                            <EditRoundedIcon />
                         </button>
                     </td>
                 </tr>

@@ -8,10 +8,24 @@ exports.getAllSetlists = (callback) => {
 }
 
 // get a Setlist by setlistId from the database
+// exports.getSetlistById = (setlistId, callback) => {
+//     const queryGetSetlistById =  `
+//         SELECT * FROM Setlists
+//         WHERE setlistId = ?;`;
+//     db.pool.query(queryGetSetlistById, [setlistId], callback);
+// }
+
+// get a Setlist with song titles by setlistId from the database
 exports.getSetlistById = (setlistId, callback) => {
-    const queryGetSetlistById =  `
-        SELECT * FROM Setlists
-        WHERE setlistId = ?;`;
+    const queryGetSetlistById = `
+        SELECT Setlists.setlistName,
+               GROUP_CONCAT(Songs.songTitle SEPARATOR ', ') AS setlistSongs
+        FROM Setlists
+        JOIN
+             SetlistSongs ON Setlists.setlistId = SetlistSongs.setlistId
+        JOIN
+             Songs ON Songs.songId = SetlistSongs.songId
+        WHERE Setlists.setlistId = ?;`;
     db.pool.query(queryGetSetlistById, [setlistId], callback);
 }
 

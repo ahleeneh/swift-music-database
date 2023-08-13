@@ -42,7 +42,7 @@ function AlbumDeleteForm({ data, onDelete }) {
 
                         {data.map((d, i) => (
                             <option key={i} value={d.albumId}>
-                                {d.albumTitle}
+                                ({d.albumId}) {d.albumTitle}
                             </option>
                         ))}
                     </select>

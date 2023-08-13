@@ -76,7 +76,7 @@ function SetlistSongsPage() {
 
                 </div>
 
-                <SetlistSongsTable data={data} onEdit={openEditModal}/>
+                <SetlistSongsTable data={data} onEdit={openEditModal} itemsPerPage={20}/>
 
             </div>
 

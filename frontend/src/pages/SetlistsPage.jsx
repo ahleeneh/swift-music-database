@@ -4,12 +4,13 @@ import SetlistsTable from '../components/setlists/SetlistsTable';
 import SetlistAddForm from '../components/setlists/SetlistAddForm';
 import SetlistDeleteForm from '../components/setlists/SetlistDeleteForm';
 import SetlistUpdateForm from '../components/setlists/SetlistUpdateForm';
+import SetlistViewSongs from '../components/setlists/SetlistViewSongs';
 import Modal from '../components/Modal';
 import Axios from 'axios';
 
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
-import PageviewOutlinedIcon from "@mui/icons-material/PageviewOutlined";
+import EditNoteRoundedIcon from '@mui/icons-material/EditNoteRounded';
 
 function SetlistsPage() {
     // store data fetched from backend
@@ -20,6 +21,8 @@ function SetlistsPage() {
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
     const [selectedSetlist, setSelectedSetlist] = useState(false);
+    const [isViewSongsModalOpen, setIsViewSongsModalOpen] = useState(false);
+
 
     // send a GET request to view all Setlists
     const getSetlists = async () => {
@@ -38,6 +41,12 @@ function SetlistsPage() {
     useEffect(() => {
         getSetlists();
     }, [])
+
+
+    const openViewSongsModal = (setlist) => {
+        setSelectedSetlist(setlist);
+        setIsViewSongsModalOpen(true);
+    };
 
     //open the edit modal with the selected Setlist
     const openEditModal = (setlist) => {
@@ -65,7 +74,7 @@ function SetlistsPage() {
                         <Link to="/setlist-songs">
                             <button
                                 className="view-icon">
-                                <PageviewOutlinedIcon/>SETLIST SONGS
+                                <EditNoteRoundedIcon/>SETLIST SONGS
                             </button>
                         </Link>
                         <button
@@ -82,7 +91,7 @@ function SetlistsPage() {
 
                 </div>
 
-                <SetlistsTable data={data} onEdit={openEditModal}/>
+                <SetlistsTable data={data} onEdit={openEditModal} onView={openViewSongsModal} />
 
             </div>
 
@@ -113,6 +122,14 @@ function SetlistsPage() {
                         getSetlists();
                         setIsEditModalOpen(false);
                     }}/>
+            </Modal>
+
+            <Modal
+                isOpen={isViewSongsModalOpen}
+                onClose={() => setIsViewSongsModalOpen(false)}>
+                <SetlistViewSongs
+                    selectedSetlist={selectedSetlist}
+                    />
             </Modal>
 
         </div>

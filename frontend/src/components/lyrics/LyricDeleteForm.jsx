@@ -42,7 +42,7 @@ function LyricDeleteForm({ data, onDelete }) {
 
                         {data.map((d, i) => (
                             <option key={i} value={d.lyricId}>
-                                {d.songTitle}
+                                ({d.lyricId}) {d.songTitle}
                             </option>
                         ))}
                     </select>

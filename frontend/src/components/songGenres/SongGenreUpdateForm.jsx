@@ -63,7 +63,7 @@ function SongGenreUpdateForm({ selectedSongGenre, onUpdate }) {
     // return the update Lyrics form
     return (
         <div className="form">
-            <legend>Update Song Genre</legend>
+            <legend>Update a Song Genre</legend>
 
             <form onSubmit={(e) => { e.preventDefault(); }}>
 

@@ -80,58 +80,12 @@
   overflow-y: auto;
 }
 
-/**************************** 
-scrollbar customization idea by Kevin Powell
-https://www.youtube.com/watch?v=lvKK2fs6h4I
-*****************************/
-
-/* Hide scrollbar at start */
-.App-sidebar::-webkit-scrollbar {
-  width: .4em;
-  opacity: 0;
-}
-
-/* Show the track when hovering over sidebar */
-.App-sidebar:hover::-webkit-scrollbar-track {
-  background: #2e2e2e; /* track color */
-  border-radius: 100vw;
-  margin-block: .25em;
-}
-
-
-.App-sidebar:hover::-webkit-scrollbar-thumb {
-  background: #555; /* thumb color */
-  border-radius: 100vw;
-}
-
-.App-sidebar:hover::-webkit-scrollbar-thumb:hover {
-  background: #918e8e;
-}
 
 
 /*****************************
 MAIN SCROLLBAR 
 ******************************/
 
-.App-main::-webkit-scrollbar {
-  width: .8em; /* width of the scrollbar */
-  height: .8em;
-}
-
-.App-main::-webkit-scrollbar-track {
-  background: #2e2e2e; /* color of the track */
-  border-radius: 100vw;
-  margin-block: .25em;
-}
-
-.App-main::-webkit-scrollbar-thumb {
-  background: #555; /* color of the thumb */
-  border-radius: 100vw;
-}
-
-.App-main::-webkit-scrollbar-thumb:hover {
-  background: #918e8e;
-}
 
 .App-main {
   flex: 1;
@@ -328,6 +282,83 @@ footer {
   color: var(--color-info-dark);
 }
 
+/*
+  SMALL CARD CONTAINER
+*/
+.small-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.small-card-container h3 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.small-card-container p {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 2rem 0;
+  /*color: var(--color-info-dark);*/
+}
+
+.small-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex: 1;
+  min-width: 30%;
+  text-align: left;
+  border-radius: var(--border-radius-1);
+  overflow: hidden;
+}
+
+.small-card-green {
+  border-left: 1rem solid var(--color-midnights-green);
+  border-right: 1px solid var(--color-midnights-green);
+  border-top: 1px solid var(--color-midnights-green);
+  border-bottom: 1px solid var(--color-midnights-green);
+}
+
+.small-card-yellow {
+  border-left: 1rem solid var(--color-midnights-yellow);
+  border-right: 1px solid var(--color-midnights-yellow);
+  border-top: 1px solid var(--color-midnights-yellow);
+  border-bottom: 1px solid var(--color-midnights-yellow);
+}
+
+.small-card-blue {
+  border-left: 1rem solid var(--color-midnights-blue);
+  border-right: 1px solid var(--color-midnights-blue);
+  border-top: 1px solid var(--color-midnights-blue);
+  border-bottom: 1px solid var(--color-midnights-blue);
+}
+
+.small-card-pink {
+  border-left: 1rem solid var(--color-midnights-pink);
+  border-right: 1px solid var(--color-midnights-pink);
+  border-top: 1px solid var(--color-midnights-pink);
+  border-bottom: 1px solid var(--color-midnights-pink);
+}
+
+.small-card-green p {
+  color: var(--color-midnights-green);
+}
+
+.small-card-yellow p {
+  color: var(--color-midnights-yellow);
+}
+
+.small-card-pink p {
+  color: var(--color-midnights-pink);
+}
+
+.small-card-blue p {
+  color: var(--color-midnights-blue);
+}
+
 
 /*  
   TABLES
@@ -426,7 +457,6 @@ button {
   float: right;
   align-items: center;
   border-radius: var(--border-radius-1);
-  box-shadow: var(--box-shadow-button);
   background-color: var(--color-midnights-yellow-bright);
   color: var(--color-white);
 }
@@ -531,11 +561,12 @@ form {
   font-family: 'Inter', sans-serif;
 }
 
-.form legend {
+.form legend, .form h2 {
   font-size: 1.4rem;
   font-family: 'Space Mono', monospace;
   margin-bottom: 2rem;
-  color: var(--color-inf-dark);
+  color: var(--color-info-dark);
+  font-weight: normal;
 }
 
 

@@ -42,7 +42,7 @@ function TourDeleteForm({ data, onDelete }) {
 
                         {data.map((d, i) => (
                             <option key={i} value={d.tourId}>
-                                {d.tourName}
+                                ({d.tourId}) {d.tourName}
                             </option>
                         ))}
                     </select>

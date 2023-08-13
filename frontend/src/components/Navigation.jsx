@@ -49,15 +49,6 @@ function Navigation() {
                 </li>
 
                 <li className="active-link">
-                    <NavLink to="/lyrics" className="nav-link">
-                        <div className="icon-container">
-                            <LyricsRoundedIcon />
-                            <h3>Lyrics</h3>
-                        </div>
-                    </NavLink>
-                </li>
-
-                <li className="active-link">
                     <NavLink to="/tours" className="nav-link">
                         <div className="icon-container">
                             <TourRoundedIcon />
@@ -83,29 +74,14 @@ function Navigation() {
                     </NavLink>
                 </li>
 
-                {/*<li className="active-link">*/}
-                {/*    <NavLink to="/setlist-songs" className="nav-link">*/}
-                {/*        <div className="icon-container">*/}
-                {/*            <h3>Setlist Songs</h3>*/}
-                {/*        </div>*/}
-                {/*    </NavLink>*/}
-                {/*</li>*/}
-
-                {/*<li className="active-link">*/}
-                {/*    <NavLink to="/genres" className="nav-link">*/}
-                {/*        <div className="icon-container">*/}
-                {/*            <h3>Genres</h3>*/}
-                {/*        </div>*/}
-                {/*    </NavLink>*/}
-                {/*</li>*/}
-
-                {/*<li className="active-link">*/}
-                {/*    <NavLink to="/song-genres" className="nav-link">*/}
-                {/*        <div className="icon-container">*/}
-                {/*            <h3>Song Genres</h3>*/}
-                {/*        </div>*/}
-                {/*    </NavLink>*/}
-                {/*</li>*/}
+                <li className="active-link">
+                    <NavLink to="/lyrics" className="nav-link">
+                        <div className="icon-container">
+                            <LyricsRoundedIcon />
+                            <h3>Lyrics</h3>
+                        </div>
+                    </NavLink>
+                </li>
 
             </ul>
         </nav>

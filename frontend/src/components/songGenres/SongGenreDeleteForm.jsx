@@ -25,7 +25,7 @@ function SongGenreDeleteForm({ data, onDelete }) {
     // return the delete Album form
     return (
         <div className="form">
-            <legend>Delete Song Genre</legend>
+            <legend>Delete a Song Genre</legend>
 
             <form onSubmit={(e) => { e.preventDefault(); }}>
 

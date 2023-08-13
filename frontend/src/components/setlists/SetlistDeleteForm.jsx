@@ -42,7 +42,7 @@ function SetlistDeleteForm({ data, onDelete }) {
 
                         {data.map((d, i) => (
                             <option key={i} value={d.setlistId}>
-                                {d.setlistName}
+                                ({d.setlistId}) {d.setlistName}
                             </option>
                         ))}
                     </select>

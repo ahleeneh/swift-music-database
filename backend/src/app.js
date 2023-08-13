@@ -1,7 +1,6 @@
 // import required modules
 const express = require('express'); // use Express library for web sever
 const cors = require('cors');
-const router = express.Router();
 const PORT = 1989;
 const app = express();
 require('dotenv').config();
@@ -11,6 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // import route handlers for all entity pages
+const homeRouter = require('./routes/homeRouter');
 const albumsRouter = require('./routes/albumsRouter');
 const genresRouter = require('./routes/genresRouter');
 const toursRouter = require('./routes/toursRouter');
@@ -21,12 +21,8 @@ const concertsRouter = require('./routes/concertsRouter');
 const songGenresRouter = require('./routes/songGenresRouter');
 const setlistSongsRouter = require('./routes/setlistSongsRouter');
 
-// root route
-app.get('/', (req, res) => {
-    return res.json("Hello from the backend!")
-});
-
 // mount route handlers to the specified pages
+app.use('/', homeRouter);
 app.use('/albums', albumsRouter);
 app.use('/genres', genresRouter);
 app.use('/tours', toursRouter);
@@ -37,11 +33,7 @@ app.use('/concerts', concertsRouter);
 app.use('/song-genres', songGenresRouter);
 app.use('/setlist-songs', setlistSongsRouter);
 
-
 // start the backend server at the specified PORT
 app.listen(PORT, () => {
     console.log('Express started on http://localhost:' + PORT + '; press Ctrl-C to terminate.')
 });
-
-// export the router
-// module.exports = router;

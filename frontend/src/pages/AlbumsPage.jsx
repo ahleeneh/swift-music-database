@@ -12,7 +12,7 @@ import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined
 
 function AlbumsPage() {
     // store data fetched from backend
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]);
 
     // set state variables for modal components
     const [isAddModalOpen, setIsAddModalOpen] = useState(false);

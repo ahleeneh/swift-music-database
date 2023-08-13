@@ -1,32 +1,51 @@
-import React from 'react';
+import React, {useState} from 'react';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import {calculatePagination} from '../../utils/paginationUtils';
+import Pagination from "../Pagination";
 
-function SetlistSongsTable({ data, onEdit }) {
+function SetlistSongsTable({data, onEdit, itemsPerPage}) {
+
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const {currentItems, totalPages} = calculatePagination(currentPage, itemsPerPage, data);
+
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
+
     return (
-        <table>
-            <thead>
-            <tr>
-                <th>Setlist Song ID</th>
-                <th>Setlist ID</th>
-                <th>Song ID</th>
-                <th>Edit</th>
-            </tr>
-            </thead>
-            <tbody>
-            {data.map((d) => (
-                <tr key={d.setlistSongId}>
-                    <td>{d.setlistSongId}</td>
-                    <td>{d.setlistName}</td>
-                    <td>{d.songTitle}</td>
-                    <td>
-                        <button className="edit-icon" onClick={() => onEdit(d)}>
-                            <EditOutlinedIcon />
-                        </button>
-                    </td>
+        <>
+            <table>
+                <thead>
+                <tr>
+                    <th>Setlist Song ID</th>
+                    <th>Setlist ID</th>
+                    <th>Song ID</th>
+                    <th>Edit</th>
                 </tr>
-            ))}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                {currentItems.map((d) => (
+                    <tr key={d.setlistSongId}>
+                        <td>{d.setlistSongId}</td>
+                        <td>{d.setlistName}</td>
+                        <td>{d.songTitle}</td>
+                        <td>
+                            <button className="edit-icon" onClick={() => onEdit(d)}>
+                                <EditOutlinedIcon/>
+                            </button>
+                        </td>
+                    </tr>
+                ))}
+                </tbody>
+            </table>
+
+            <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                handlePageChange={handlePageChange}
+            />
+        </>
     )
 }
 
