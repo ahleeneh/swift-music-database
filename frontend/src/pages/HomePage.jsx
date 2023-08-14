@@ -28,7 +28,7 @@ function HomePage() {
         <div>
             <div className="card">
                 <h2>Home Page</h2>
-                <p>Hello Admin! Welcome to the Taylor Swift Backend Database.
+                <p>Hello Admin! Welcome to the Swift Music Database Interface.
                     This is the central hub where you can manage all things Taylor Swift music-related.
                     We've got everything neatly organized for you – albums, songs, tours, and genres – all at your fingertips.</p>
                 <p>Consider this your backstage pass to Taylor's musical world.

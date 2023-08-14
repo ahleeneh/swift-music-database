@@ -67,7 +67,7 @@ function SongGenreUpdateForm({ selectedSongGenre, onUpdate }) {
 
             <form onSubmit={(e) => { e.preventDefault(); }}>
 
-                <label htmlFor="updateGenreId">Genre:
+                <label htmlFor="updateGenreId">Genre for "{selectedSongGenre.songTitle}":
                     <select
                         name="updateGenreId"
                         id="updateGenreId"

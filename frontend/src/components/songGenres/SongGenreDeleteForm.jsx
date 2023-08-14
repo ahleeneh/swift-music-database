@@ -47,14 +47,14 @@ function SongGenreDeleteForm({ data, onDelete }) {
                         ))}
                     </select>
 
-                    <button
-                        type="button"
-                        className="delete-icon"
-                        onClick={deleteData}>
-                        Delete Song Genre
-                    </button>
-
                 </label>
+
+                <button
+                    type="button"
+                    className="delete-icon"
+                    onClick={deleteData}>
+                    Delete Song Genre
+                </button>
 
             </form>
 

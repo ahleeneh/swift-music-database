@@ -46,15 +46,14 @@ function AlbumDeleteForm({ data, onDelete }) {
                             </option>
                         ))}
                     </select>
-
-                    <button
-                        type="button"
-                        className="delete-icon"
-                        onClick={deleteData}>
-                        Delete Album
-                    </button>
-
                 </label>
+
+                <button
+                    type="button"
+                    className="delete-icon"
+                    onClick={deleteData}>
+                    Delete Album
+                </button>
 
             </form>
 

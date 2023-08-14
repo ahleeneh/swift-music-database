@@ -110,7 +110,7 @@ function SongGenreAddForm({ onAdd }) {
                     type="button"
                     className="add-icon"
                     onClick={addData}>
-                    Add Song-Genre
+                    Add Song Genre
                 </button>
 
             </form>

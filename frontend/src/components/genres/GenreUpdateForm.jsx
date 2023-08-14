@@ -43,7 +43,7 @@ function GenreUpdateForm({ selectedGenre, onUpdate }) {
 
             <form onSubmit={(e) => { e.preventDefault(); }}>
 
-                <label htmlFor="updateGenreName">Name:
+                <label htmlFor="updateGenreName">Genre Name:
                     <input
                         type="text"
                         name="updateGenreName"

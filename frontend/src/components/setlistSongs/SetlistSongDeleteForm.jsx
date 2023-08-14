@@ -47,14 +47,14 @@ function SetlistSongDeleteForm({ data, onDelete }) {
                         ))}
                     </select>
 
-                    <button
-                        type="button"
-                        className="delete-icon"
-                        onClick={deleteData}>
-                        Delete Setlist Song
-                    </button>
-
                 </label>
+
+                <button
+                    type="button"
+                    className="delete-icon"
+                    onClick={deleteData}>
+                    Delete Setlist Song
+                </button>
 
             </form>
 

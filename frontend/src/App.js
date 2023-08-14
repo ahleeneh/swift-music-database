@@ -27,7 +27,7 @@ function App() {
 
             <main className="App-main">
               <header className="App-header">
-                <h1>Taylor Swift Database</h1>
+                <h1>Swift Music Database</h1>
               </header>
 
               <div className="App-content">
@@ -46,7 +46,7 @@ function App() {
               </div>
 
               <footer>
-                <p>&copy; 2023 Aline Murillo</p>
+                <p>&copy; 2023 Aline Murillo | <a href="https://github.com/ahleeneh">GitHub</a></p>
               </footer>
             </main>
 
