@@ -2,9 +2,9 @@
 This project was created by Aline Murillo after drawing inspiration from the skills acquired during the Summer 2023 term in an Intro to Databases course. The Swift Music Database blends technology and music and focuses on the captivating evolution of Taylor Swift's musical history.
 
 ## 📄 Project Overview
-Crafted using JavaScript, Node.js, Express.js, and React, the Swift Music Database was designed to provide administrators an intuitive and user-friendly interface. This project seamlessly merges the backend and frontend components, and empowers administrators to manage across key sections such as Albums, Songs, Genres, Tours, Concerts, Setlists, and Lyrics. 
+Crafted using JavaScript, Node.js, Express.js, and React, the Swift Music Database was designed to provide administrators an intuitive and user-friendly interface. This project seamlessly merges the backend and frontend components, and empowers administrators to manage content across key sections such as Albums, Songs, Genres, Tours, Concerts, Setlists, and Lyrics. 
 
-## 💾 Datase Schema
+## 💾 Database Schema
 ![Screenshot 2023-08-10 at 6 53 37 PM](https://github.com/ahleeneh/taylor-swift/assets/107948221/c8f0911d-c80a-44c4-9739-c5ad56729454)
 
 ## 📸 Screenshots
