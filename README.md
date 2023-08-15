@@ -32,23 +32,3 @@ Albums Page:
 Songs Page: Add Demonstrated
 ![Songs ADD](https://github.com/ahleeneh/swift-music-database/assets/107948221/5f0d7a3b-e680-47f0-b740-2f98623443a8)
 
-Genres Page:
-![Screenshot 2023-08-15 at 12 24 49 PM](https://github.com/ahleeneh/swift-music-database/assets/107948221/b8157335-cfe5-4709-846f-533fbeba4d8a)
-
-Song Genres Page: M:N relationship between Songs and Genres
-![Screenshot 2023-08-15 at 12 25 00 PM](https://github.com/ahleeneh/swift-music-database/assets/107948221/5dc434ff-6413-413d-83e8-212cde7c8039)
-
-Tours Page: Delete Demonstrated
-![Delete Tours](https://github.com/ahleeneh/swift-music-database/assets/107948221/ad47ad3b-e40b-4473-83d3-416394c7e6e4)
-
-Concerts Page: Update Demonstrated
-![concerts update](https://github.com/ahleeneh/swift-music-database/assets/107948221/806b0c44-65d6-45b9-a60d-dfb34f5390fe)
-
-Setlists Page:
-![Screenshot 2023-08-15 at 12 25 16 PM](https://github.com/ahleeneh/swift-music-database/assets/107948221/7707fc42-69dc-45b5-ac7b-7567b09126e3)
-
-Setlist Songs Page: M:N relationship between Setlists and Songs
-![Screenshot 2023-08-15 at 12 25 30 PM](https://github.com/ahleeneh/swift-music-database/assets/107948221/1fdd5fbc-1c6e-4a32-99fd-df483861f0a1)
-
-Lyrics Page:
-![Screenshot 2023-08-15 at 12 25 39 PM](https://github.com/ahleeneh/swift-music-database/assets/107948221/94d9c3dd-93ee-4c1f-bd45-3a8711004dd4)
