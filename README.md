@@ -25,36 +25,35 @@ To set up and run the Swift Music Database on your local machine, follow these s
 8. Access the Application: Open your web browser and visit http://localhost:9891 to access the Swift Music Database user interface.
 
 ## 💾 Database Schema
-![Screenshot 2023-08-10 at 6 53 37 PM](https://github.com/ahleeneh/taylor-swift/assets/107948221/c8f0911d-c80a-44c4-9739-c5ad56729454)
+![Screenshot 2023-08-10 at 6 53 37 PM](https://github.com/ahleeneh/swift-music-database/assets/107948221/29781e53-52ee-4fe6-a98c-bdf4de769dda)
 
 ## 📸 Screenshots
 Home Page: Entry point into Taylor Swift's musical history
-![Screenshot 2023-08-14 at 11 57 09 AM](https://github.com/ahleeneh/taylor-swift/assets/107948221/444f91b4-631e-4aa6-b155-e976ff9b8536)
+![Screenshot 2023-08-15 at 12 24 29 PM](https://github.com/ahleeneh/swift-music-database/assets/107948221/f336b6d8-e38d-4c82-9884-d961d9bad6cf)
 
 Albums Page:
-![Albums](https://github.com/ahleeneh/taylor-swift/assets/107948221/469fb6dd-bd6a-418d-9a60-dc177dc5fc24)
+![Albums](https://github.com/ahleeneh/swift-music-database/assets/107948221/c3551ee8-a561-4ceb-bf89-c1532d54f59a)
 
 Songs Page: Add Demonstrated
-![Songs ADD](https://github.com/ahleeneh/taylor-swift/assets/107948221/d9d029ad-d3a7-4362-9a5f-fd897e77fbb0)
+![Songs ADD](https://github.com/ahleeneh/swift-music-database/assets/107948221/5f0d7a3b-e680-47f0-b740-2f98623443a8)
 
 Genres Page:
-![Screenshot 2023-08-14 at 12 20 34 PM](https://github.com/ahleeneh/taylor-swift/assets/107948221/a2e15f2a-482f-434d-89d4-4947fcf8b5ee)
+![Screenshot 2023-08-15 at 12 24 49 PM](https://github.com/ahleeneh/swift-music-database/assets/107948221/b8157335-cfe5-4709-846f-533fbeba4d8a)
 
 Song Genres Page: M:N relationship between Songs and Genres
-![Screenshot 2023-08-14 at 12 20 51 PM](https://github.com/ahleeneh/taylor-swift/assets/107948221/6071bc25-e6a4-4808-99ba-f9436ea9dd23)
+![Screenshot 2023-08-15 at 12 25 00 PM](https://github.com/ahleeneh/swift-music-database/assets/107948221/5dc434ff-6413-413d-83e8-212cde7c8039)
 
 Tours Page: Delete Demonstrated
-![Delete Tours](https://github.com/ahleeneh/taylor-swift/assets/107948221/ec5829ce-8704-4382-8737-bb08d1561d1d)
+![Delete Tours](https://github.com/ahleeneh/swift-music-database/assets/107948221/ad47ad3b-e40b-4473-83d3-416394c7e6e4)
 
 Concerts Page: Update Demonstrated
-![concerts update](https://github.com/ahleeneh/taylor-swift/assets/107948221/93e45f18-7ec9-4b9e-99a3-0afea674fda9)
+![concerts update](https://github.com/ahleeneh/swift-music-database/assets/107948221/806b0c44-65d6-45b9-a60d-dfb34f5390fe)
 
 Setlists Page:
-![Screenshot 2023-08-14 at 12 19 31 PM](https://github.com/ahleeneh/taylor-swift/assets/107948221/f5cdb3d1-ba48-4c75-bacc-7c4bc95a76b4)
+![Screenshot 2023-08-15 at 12 25 16 PM](https://github.com/ahleeneh/swift-music-database/assets/107948221/7707fc42-69dc-45b5-ac7b-7567b09126e3)
 
 Setlist Songs Page: M:N relationship between Setlists and Songs
-![Screenshot 2023-08-14 at 12 20 02 PM](https://github.com/ahleeneh/taylor-swift/assets/107948221/df1eead8-2ff7-49b3-9fc5-b6c81e7a3ddc)
+![Screenshot 2023-08-15 at 12 25 30 PM](https://github.com/ahleeneh/swift-music-database/assets/107948221/1fdd5fbc-1c6e-4a32-99fd-df483861f0a1)
 
 Lyrics Page:
-![Screenshot 2023-08-14 at 12 19 23 PM](https://github.com/ahleeneh/taylor-swift/assets/107948221/5488f1dc-afed-4a09-9a00-67c0e1cd673a)
-
+![Screenshot 2023-08-15 at 12 25 39 PM](https://github.com/ahleeneh/swift-music-database/assets/107948221/94d9c3dd-93ee-4c1f-bd45-3a8711004dd4)
