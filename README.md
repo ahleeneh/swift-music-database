@@ -1,4 +1,4 @@
-# 🖥️ Personal Database Project: Swift Music Database
+# 🖥️ Swift Music Database
 This project was created by Aline Murillo after drawing inspiration from the skills acquired during the Summer 2023 term in an Intro to Databases course. The Swift Music Database blends technology and music and focuses on the captivating evolution of Taylor Swift's musical history.
 
 ## 📄 Project Overview
